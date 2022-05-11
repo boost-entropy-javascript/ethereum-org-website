@@ -1,6 +1,6 @@
 version: "1"
 rules:
   - base: dev
-    upstream: null:dev
+    upstream: ethereum:dev
     mergeMethod: merge
     mergeUnstable: true
