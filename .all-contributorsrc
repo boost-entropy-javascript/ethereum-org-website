@@ -4899,7 +4899,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/43940590?v=4",
       "profile": "https://www.andrewgallagher-portfolio.com/",
       "contributions": [
-        "content"
+        "content",
+        "code"
       ]
     },
     {
@@ -5119,7 +5120,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/92654?v=4",
       "profile": "https://tomlisankie.com",
       "contributions": [
-        "doc"
+        "doc",
+        "bug"
       ]
     },
     {
@@ -7877,6 +7879,33 @@
         "doc",
         "translation",
         "bug"
+      ]
+    },
+    {
+      "login": "ManuKashyap01",
+      "name": "Manu kashyap",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76866512?v=4",
+      "profile": "https://github.com/ManuKashyap01",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "arjenzhou",
+      "name": "Zhou Yang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23600703?v=4",
+      "profile": "http://arjenzhou.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "burningtree",
+      "name": "tree",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67269?v=4",
+      "profile": "https://keybase.io/tree",
+      "contributions": [
+        "doc"
       ]
     }
   ],
