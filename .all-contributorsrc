@@ -937,7 +937,8 @@
       "profile": "https://github.com/EmanHerawy",
       "contributions": [
         "translation",
-        "code"
+        "code",
+        "ideas"
       ]
     },
     {
@@ -8055,6 +8056,24 @@
       "name": "Oli Lalonde",
       "avatar_url": "https://avatars.githubusercontent.com/u/416585?v=4",
       "profile": "https://syskall.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "gingerheart86",
+      "name": "gingerheart86",
+      "avatar_url": "https://avatars.githubusercontent.com/u/100948227?v=4",
+      "profile": "https://github.com/gingerheart86",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "naveen106",
+      "name": "Naveen Kumar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61573478?v=4",
+      "profile": "https://github.com/naveen106",
       "contributions": [
         "doc"
       ]
