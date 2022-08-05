@@ -8300,6 +8300,25 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "Unforkable",
+      "name": "Unforkable",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86481149?v=4",
+      "profile": "https://github.com/Unforkable",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Rodrigolvc",
+      "name": "Rodrigo vasquez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108540208?v=4",
+      "profile": "https://github.com/Rodrigolvc",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
