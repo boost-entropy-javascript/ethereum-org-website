@@ -8319,6 +8319,34 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "michaelmccallam",
+      "name": "Michael McCallam",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3510607?v=4",
+      "profile": "https://github.com/michaelmccallam",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "PolinaShanti",
+      "name": "Polina G.",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110098268?v=4",
+      "profile": "https://nownodes.io/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Cerebro92",
+      "name": "Neeraj Gahlot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13215478?v=4",
+      "profile": "https://github.com/Cerebro92",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
