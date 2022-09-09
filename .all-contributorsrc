@@ -8744,6 +8744,42 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "MahendraBishnoi29",
+      "name": "browny",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74294202?v=4",
+      "profile": "https://github.com/MahendraBishnoi29",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "sandakersmann",
+      "name": "Marius Kjærstad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6118832?v=4",
+      "profile": "https://github.com/sandakersmann",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "scottfits",
+      "name": "Scott Fitsimones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1193692?v=4",
+      "profile": "http://scottfits.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "kryptopaul",
+      "name": "Paul Lechocki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87016182?v=4",
+      "profile": "https://github.com/kryptopaul",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
