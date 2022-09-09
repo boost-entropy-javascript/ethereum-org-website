@@ -1364,7 +1364,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/vvladd"><img src="https://avatars.githubusercontent.com/u/13506999?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vlad Kokhan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vvladd" title="Documentation">📖</a> <a href="#translation-vvladd" title="Translation">🌍</a></td>
     </tr>
     <tr>
-      <td align="center"><a href="https://github.com/SavPhill"><img src="https://avatars.githubusercontent.com/u/38789408?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Phill</b></sub></a><br /><a href="#content-SavPhill" title="Content">🖋</a></td>
+      <td align="center"><a href="https://github.com/SavPhill"><img src="https://avatars.githubusercontent.com/u/38789408?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Phill</b></sub></a><br /><a href="#content-SavPhill" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=SavPhill" title="Documentation">📖</a></td>
       <td align="center"><a href="http://u64.cam"><img src="https://avatars.githubusercontent.com/u/17013462?v=4?s=100" width="100px;" alt=""/><br /><sub><b>cam</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Acamerondurham" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=camerondurham" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/calumtomeny"><img src="https://avatars.githubusercontent.com/u/939917?v=4?s=100" width="100px;" alt=""/><br /><sub><b>calumtomeny</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=calumtomeny" title="Documentation">📖</a></td>
       <td align="center"><a href="https://robertu7.github.io/"><img src="https://avatars.githubusercontent.com/u/4065233?v=4?s=100" width="100px;" alt=""/><br /><sub><b>robertu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=robertu7" title="Documentation">📖</a> <a href="#translation-robertu7" title="Translation">🌍</a></td>
@@ -1384,8 +1384,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center"><a href="https://github.com/Denllay"><img src="https://avatars.githubusercontent.com/u/75447714?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Denllay</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Denllay" title="Documentation">📖</a> <a href="#translation-Denllay" title="Translation">🌍</a></td>
       <td align="center"><a href="http://yalexis.eth.xyz"><img src="https://avatars.githubusercontent.com/u/96504224?v=4?s=100" width="100px;" alt=""/><br /><sub><b>yalexis.eth</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yalexis-eth" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/smartprogrammer93"><img src="https://avatars.githubusercontent.com/u/33181301?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ahmad Bitar</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=smartprogrammer93" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://carllippert.com"><img src="https://avatars.githubusercontent.com/u/16457876?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Carl Lippert</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=carllippert" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/tymtam2"><img src="https://avatars.githubusercontent.com/u/1097613?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tymek Majewski</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tymtam2" title="Documentation">📖</a></td>
+      <td align="center"><a href="http://cryptolibertarian.id"><img src="https://avatars.githubusercontent.com/u/108990005?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cryptolibertarian.id</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Cryptolibertarian-id" title="Documentation">📖</a></td>
     </tr>
-  </tobdy>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
