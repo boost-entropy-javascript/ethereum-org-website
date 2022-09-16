@@ -8826,6 +8826,33 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "slf188",
+      "name": "菲利",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49417481?v=4",
+      "profile": "huggingface.co/slf188",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "DamitusThyYeetus123",
+      "name": "DamitusThyYeetus123",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108782125?v=4",
+      "profile": "https://github.com/DamitusThyYeetus123",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "matusame",
+      "name": "matusame",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97032288?v=4",
+      "profile": "https://github.com/matusame",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
