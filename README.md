@@ -1406,6 +1406,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/matusame"><img src="https://avatars.githubusercontent.com/u/97032288?v=4?s=100" width="100px;" alt=""/><br /><sub><b>matusame</b></sub></a><br /><a href="#translation-matusame" title="Translation">🌍</a></td>
       <td align="center"><a href="https://github.com/laurentlucian"><img src="https://avatars.githubusercontent.com/u/33508364?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lohan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=laurentlucian" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/marcellamalune"><img src="https://avatars.githubusercontent.com/u/63505124?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marcella</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=marcellamalune" title="Code">💻</a></td>
+      <td align="center"><a href="https://londonbustimes.com/"><img src="https://avatars.githubusercontent.com/u/8823227?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Leon Todd</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=leontodd" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://ladislasfontaine.com/"><img src="https://avatars.githubusercontent.com/u/42914253?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ladislas Fontaine</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ladislasfontaine" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/YasshhYadav"><img src="https://avatars.githubusercontent.com/u/91071840?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yash Yadav</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=YasshhYadav" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/barro32"><img src="https://avatars.githubusercontent.com/u/1510990?v=4?s=100" width="100px;" alt=""/><br /><sub><b>barro</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=barro32" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>

@@ -8871,6 +8871,42 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "leontodd",
+      "name": "Leon Todd",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8823227?v=4",
+      "profile": "https://londonbustimes.com/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ladislasfontaine",
+      "name": "Ladislas Fontaine",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42914253?v=4",
+      "profile": "https://ladislasfontaine.com/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "YasshhYadav",
+      "name": "Yash Yadav",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91071840?v=4",
+      "profile": "https://github.com/YasshhYadav",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "barro32",
+      "name": "barro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1510990?v=4",
+      "profile": "https://github.com/barro32",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
