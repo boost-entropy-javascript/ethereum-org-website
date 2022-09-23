@@ -1413,6 +1413,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/YasshhYadav"><img src="https://avatars.githubusercontent.com/u/91071840?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yash Yadav</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=YasshhYadav" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/barro32"><img src="https://avatars.githubusercontent.com/u/1510990?v=4?s=100" width="100px;" alt=""/><br /><sub><b>barro</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=barro32" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/Master7130"><img src="https://avatars.githubusercontent.com/u/85327930?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Master7130</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Master7130" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/Lude15"><img src="https://avatars.githubusercontent.com/u/109084476?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lude15</b></sub></a><br /><a href="#ideas-Lude15" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center"><a href="https://crust.network"><img src="https://avatars.githubusercontent.com/u/10335300?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Luke Fan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=badkk" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/TABASCOatw"><img src="https://avatars.githubusercontent.com/u/84655644?v=4?s=100" width="100px;" alt=""/><br /><sub><b>TABASCO</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=TABASCOatw" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/d1onys1us"><img src="https://avatars.githubusercontent.com/u/13951458?v=4?s=100" width="100px;" alt=""/><br /><sub><b>d1onys1us</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=d1onys1us" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/thib-web3"><img src="https://avatars.githubusercontent.com/u/66329321?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thibaut</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=thib-web3" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
