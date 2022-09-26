@@ -4661,7 +4661,8 @@
       "profile": "https://github.com/ndrozd",
       "contributions": [
         "bug",
-        "doc"
+        "doc",
+        "a11y"
       ]
     },
     {
@@ -8987,6 +8988,16 @@
       "profile": "https://github.com/BenedettiLucca",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "MacMorgan",
+      "name": "Mac Morgan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17681?v=4",
+      "profile": "http://www.printfly.com/",
+      "contributions": [
+        "doc",
+        "bug"
       ]
     }
   ],
