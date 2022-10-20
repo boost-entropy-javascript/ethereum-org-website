@@ -9225,6 +9225,42 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "panieldark",
+      "name": "Daniel Park",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21699995?v=4",
+      "profile": "https://www.linkedin.com/in/itsdanielpark",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "knititwearit",
+      "name": "knititwearit",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5172992?v=4",
+      "profile": "https://github.com/knititwearit",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "ryandotsmith",
+      "name": "Ryan Smith",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11726?v=4",
+      "profile": "https://r.32k.io",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "vj-codes",
+      "name": "Vaishnavi Joshi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60894542?v=4",
+      "profile": "https://vj-codes.github.io/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
