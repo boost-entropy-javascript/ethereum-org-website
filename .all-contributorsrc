@@ -9345,6 +9345,51 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "this-oliver",
+      "name": "Oliver",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32515201?v=4",
+      "profile": "http://oliverrr.net",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jiOnederfull",
+      "name": "Jiwon Park",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48719289?v=4",
+      "profile": "https://github.com/jiOnederfull",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ZandtLavish",
+      "name": "Zandt Lavish",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99204971?v=4",
+      "profile": "https://github.com/ZandtLavish",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "issa-me-sush",
+      "name": "sushthecoda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29679285?v=4",
+      "profile": "https://github.com/issa-me-sush",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "LucasMartinCalderon",
+      "name": "Lucas Martin Calderon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25382998?v=4",
+      "profile": "http://pentestify.io",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
