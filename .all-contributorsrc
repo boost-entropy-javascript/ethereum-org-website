@@ -6853,7 +6853,8 @@
       "profile": "https://github.com/vdusart",
       "contributions": [
         "doc",
-        "code"
+        "code",
+        "translation"
       ]
     },
     {
@@ -9325,7 +9326,8 @@
       "profile": "https://sebastiansupreme.eth.link",
       "contributions": [
         "ideas",
-        "translation"
+        "translation",
+        "code"
       ]
     },
     {
@@ -9506,6 +9508,15 @@
       "profile": "https://github.com/itsthedoom",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "AsheBarrett",
+      "name": "AsheBarrett",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117123553?v=4",
+      "profile": "https://github.com/AsheBarrett",
+      "contributions": [
+        "translation"
       ]
     }
   ],
