@@ -22,6 +22,7 @@ import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
+import WritersCohortBanner from "../components/Banners/Implementations/WritersCohortBanner"
 
 import { getImage } from "../utils/image"
 
@@ -141,6 +142,7 @@ interface IGetInvolvedCard {
 
 const CommunityPage = ({
   data,
+  location,
 }: PageProps<Queries.CommunityPageQuery, Context>) => {
   const { t } = useTranslation()
   const theme = useTheme()
@@ -207,6 +209,8 @@ const CommunityPage = ({
         title={t("page-community-meta-title")}
         description={t("page-community-meta-description")}
       />
+      {/* TODO: REMOVE MAY 11 */}
+      <WritersCohortBanner pathname={location.pathname} />
       <PageHero isReverse content={heroContent} />
       <Divider />
       <Flex
@@ -495,7 +499,7 @@ export const query = graphql`
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 800
+          width: 624
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -515,7 +519,7 @@ export const query = graphql`
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 1440
+          width: 740
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -525,7 +529,7 @@ export const query = graphql`
     finance: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 800
+          width: 600
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -535,7 +539,7 @@ export const query = graphql`
     hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 1440
+          width: 700
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100

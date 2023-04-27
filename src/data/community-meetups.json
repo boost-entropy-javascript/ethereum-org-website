@@ -1,5 +1,11 @@
 [
   {
+    "title": "Ethereum Ecuador",
+    "emoji": ":flag_ec:",
+    "location": "Ecuador",
+    "link": "https://www.eventbrite.com/o/ethereum-ecuador-64512134823"
+  },
+  {
     "title": "Ethereum Bogota",
     "emoji": ":co:",
     "location": "Colombia",
@@ -11,7 +17,7 @@
     "location": "Sydney",
     "link": "https://www.meetup.com/BokkyPooBahs-Ethereum-Workshop/"
   },
-   {
+  {
     "title": "Web3Mi",
     "emoji": ":ita:",
     "location": "Milan",
