@@ -10613,6 +10613,33 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "schwindtkevin",
+      "name": "Kevin Schwindt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1700789?v=4",
+      "profile": "https://github.com/schwindtkevin",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "robertkodra",
+      "name": "Robert",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36516516?v=4",
+      "profile": "https://github.com/robertkodra",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "0xObsidian",
+      "name": "obsidian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/131651958?v=4",
+      "profile": "https://github.com/0xObsidian",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
