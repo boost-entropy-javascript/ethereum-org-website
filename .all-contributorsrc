@@ -11305,6 +11305,35 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "UNOFFICIALbgd",
+      "name": "UNOFFICIALbgd",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71248977?v=4",
+      "profile": "https://github.com/UNOFFICIALbgd",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Codex-Bugmenot",
+      "name": "Codex-Bugmenot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59927099?v=4",
+      "profile": "https://github.com/Codex-Bugmenot",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "repo",
+      "name": "repo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45478?v=4",
+      "profile": "https://github.com/repo",
+      "contributions": [
+        "doc",
+        "blog",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
