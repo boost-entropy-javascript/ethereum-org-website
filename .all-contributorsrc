@@ -11368,6 +11368,88 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ryanpwaldon",
+      "name": "Ryan Waldon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12480362?v=4",
+      "profile": "https://github.com/ryanpwaldon",
+      "contributions": [
+        "content",
+        "code"
+      ]
+    },
+    {
+      "login": "4everlandorg",
+      "name": "4EVERLAND",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89854839?v=4",
+      "profile": "https://www.4everland.org",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "iepn",
+      "name": "iepn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57232813?v=4",
+      "profile": "https://member.acm.org/~rhymeq",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "veridelisi",
+      "name": "veridelisi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72710290?v=4",
+      "profile": "https://www.ispanyol.com",
+      "contributions": [
+        "tutorial"
+      ]
+    },
+    {
+      "login": "reetbatra",
+      "name": "Reet Batra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51335174?v=4",
+      "profile": "https://github.com/reetbatra",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "gndelia",
+      "name": "Gonzalo D'Elia",
+      "avatar_url": "https://avatars.githubusercontent.com/u/352474?v=4",
+      "profile": "https://github.com/gndelia",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "rileyannon",
+      "name": "Riley Annon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31807653?v=4",
+      "profile": "http://www.rileyannon.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "ayofimihan",
+      "name": "Ogunsina Champion",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31336254?v=4",
+      "profile": "http://0x13.dev",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "ardislu",
+      "name": "Ardis Lu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29699850?v=4",
+      "profile": "http://ardislu.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
