@@ -11451,6 +11451,24 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "niuhp",
+      "name": "niuhp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7373524?v=4",
+      "profile": "https://github.com/niuhp",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "xivanc",
+      "name": "xivanc",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91614446?v=4",
+      "profile": "https://github.com/xivanc",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
