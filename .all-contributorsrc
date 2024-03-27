@@ -11165,7 +11165,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/72762629?v=4",
       "profile": "http://vitto.cc",
       "contributions": [
-        "doc"
+        "doc",
+        "tool"
       ]
     },
     {
@@ -11540,6 +11541,89 @@
       "profile": "https://github.com/hkey0",
       "contributions": [
         "tool"
+      ]
+    },
+    {
+      "login": "emmanuel-awosika",
+      "name": "Emmanuel Awosika",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102589267?v=4",
+      "profile": "https://emmanuelawosika.bio.link/",
+      "contributions": [
+        "content",
+        "doc"
+      ]
+    },
+    {
+      "login": "seandotau",
+      "name": "seandotau",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12471846?v=4",
+      "profile": "https://github.com/seandotau",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "Eikix",
+      "name": "Elias Tazartes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66871571?v=4",
+      "profile": "https://github.com/Eikix",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "cradle0fFilth",
+      "name": "cradle0fFilth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64477775?v=4",
+      "profile": "https://github.com/cradle0fFilth",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "lispking",
+      "name": "King",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4446580?v=4",
+      "profile": "http://lispking.github.io/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "kartojal",
+      "name": "kartojal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11179847?v=4",
+      "profile": "https://catapulta.sh",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "AaronChen0",
+      "name": "Aaron Chen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18425462?v=4",
+      "profile": "https://github.com/AaronChen0",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "melpomene",
+      "name": "Christopher",
+      "avatar_url": "https://avatars.githubusercontent.com/u/763476?v=4",
+      "profile": "https://github.com/melpomene",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "AyumuKasuga",
+      "name": "Andrei Kostakov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/700142?v=4",
+      "profile": "https://t.me/AyumuKasuga",
+      "contributions": [
+        "content",
+        "doc"
       ]
     }
   ],
