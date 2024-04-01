@@ -11644,6 +11644,24 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "Hector-Chong",
+      "name": "Héctor Chong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12469549?v=4",
+      "profile": "http://hector.im",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "nakmr",
+      "name": "nace.kimura",
+      "avatar_url": "https://avatars.githubusercontent.com/u/145886319?v=4",
+      "profile": "https://github.com/nakmr",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
