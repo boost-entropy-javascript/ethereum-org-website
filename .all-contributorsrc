@@ -12177,6 +12177,42 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "wrexgem",
+      "name": "wrexgem",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134736543?v=4",
+      "profile": "https://github.com/wrexgem",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "cd-sigma",
+      "name": "ciphernova",
+      "avatar_url": "https://avatars.githubusercontent.com/u/119534349?v=4",
+      "profile": "https://github.com/cd-sigma",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "CodeMongerrr",
+      "name": "Aditya Joshi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99281767?v=4",
+      "profile": "https://github.com/CodeMongerrr",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "Khemmie-Ray",
+      "name": "Atoyebi Oluwakemi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89976006?v=4",
+      "profile": "https://github.com/Khemmie-Ray",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
