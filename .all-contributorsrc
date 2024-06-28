@@ -4810,7 +4810,8 @@
       "profile": "http://www.technobunnies.com",
       "contributions": [
         "doc",
-        "maintenance"
+        "maintenance",
+        "content"
       ]
     },
     {
@@ -7193,7 +7194,8 @@
       "contributions": [
         "doc",
         "ideas",
-        "bug"
+        "bug",
+        "tool"
       ]
     },
     {
@@ -12230,6 +12232,24 @@
       "profile": "https://github.com/abonnaudet-ledger",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "JacobSharples",
+      "name": "Jacob Sharples",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45126111?v=4",
+      "profile": "https://github.com/JacobSharples",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "omahs",
+      "name": "omahs",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73983677?v=4",
+      "profile": "https://github.com/omahs",
+      "contributions": [
+        "translation"
       ]
     }
   ],
