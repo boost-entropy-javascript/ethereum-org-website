@@ -1921,6 +1921,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Piyush-Tilokani"><img src="https://avatars.githubusercontent.com/u/112542519?v=4?s=100" width="100px;" alt="Piyush Tilokani"/><br /><sub><b>Piyush Tilokani</b></sub></a><br /><a href="#content-Piyush-Tilokani" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jacobourar"><img src="https://avatars.githubusercontent.com/u/109108267?v=4?s=100" width="100px;" alt="Jacobo Uribe"/><br /><sub><b>Jacobo Uribe</b></sub></a><br /><a href="#content-jacobourar" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Xcertik-Realist"><img src="https://avatars.githubusercontent.com/u/63165931?v=4?s=100" width="100px;" alt="NilFoundation"/><br /><sub><b>NilFoundation</b></sub></a><br /><a href="#content-Xcertik-Realist" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/gconnect"><img src="https://avatars.githubusercontent.com/u/23031920?v=4?s=100" width="100px;" alt="Glory Agatevure"/><br /><sub><b>Glory Agatevure</b></sub></a><br /><a href="#content-gconnect" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://amarachijohnson.com"><img src="https://avatars.githubusercontent.com/u/41474439?v=4?s=100" width="100px;" alt="Amarachi Johnson-Ubah"/><br /><sub><b>Amarachi Johnson-Ubah</b></sub></a><br /><a href="#ideas-emmanuellar" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://sumitvekariya.surge.sh"><img src="https://avatars.githubusercontent.com/u/20764957?v=4?s=100" width="100px;" alt="Sumit Vekariya"/><br /><sub><b>Sumit Vekariya</b></sub></a><br /><a href="#maintenance-sumitvekariya" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
