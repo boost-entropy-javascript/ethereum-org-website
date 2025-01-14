@@ -1,19 +1,19 @@
 ---
-title: Compiler des contrat intelligents
-description: Explication de la raison d'une compilation et pourquoi elle est nécessaire pour les contrats intelligents
-lang: fr
+title: स्मार्ट कॉन्ट्रैक्ट्स संकलित करना
+description: आपको स्मार्ट अनुबंधों को संकलित करने की आवश्यकता क्यों है और संकलन वास्तव में क्या करता है, इसका स्पष्टीकरण।
+lang: hi
 incomplete: true
 ---
 
-Vous devez compiler vos contrats pour que votre application Web et la machine virtuelle Ethereum (EVM) puissent les comprendre.
+आपको अपने अनुबंध को संकलित करने की आवश्यकता है ताकि आपका वेब ऐप और एथेरियम वर्चुअल मशीन (EVM) इसे समझ सकें।
 
-## Prérequis {#prerequisites}
+## आवश्यक शर्तें {#prerequisites}
 
-Il peut être utile de commencer par lire nos pages sur les [contrats intelligents](/developers/docs/smart-contracts/) et la [machine virtuelle Ethereum](/developers/docs/evm/) avant de vous intéresser à la compilation.
+संकलन के बारे में पढ़ने से पहले [स्मार्ट अनुबंध](/developers/docs/smart-contracts/) और [एथेरियम वर्चुअल मशीन](/developers/docs/evm/) के बारे में हमारा परिचय पढ़ने से आपको मदद मिल सकती है।
 
-## L'EVM {#the-evm}
+## EVM {#the-evm}
 
-Pour que l'[EVM](/developers/docs/evm/) puisse exécuter un contrat, il doit être en **bytecode**. La compilation a pour effet de transformer ceci :
+[EVM](/developers/docs/evm/) को आपका अनुबंध चलाने में सक्षम होने के लिए इसे **बाइटकोड** में होना चाहिए। संकलन इसे बदल देता है:
 
 ```solidity
 pragma solidity 0.4.24;
@@ -27,25 +27,25 @@ contract Greeter {
 }
 ```
 
-**en cela :**
+**इस में**
 
 ```
 PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x0 CALLDATALOAD PUSH29 0x100000000000000000000000000000000000000000000000000000000 SWAP1 DIV PUSH4 0xFFFFFFFF AND DUP1 PUSH4 0xCFAE3217 EQ PUSH2 0x46 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x52 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x5B PUSH2 0xD6 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 DUP1 PUSH1 0x20 ADD DUP3 DUP2 SUB DUP3 MSTORE DUP4 DUP2 DUP2 MLOAD DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP DUP1 MLOAD SWAP1 PUSH1 0x20 ADD SWAP1 DUP1 DUP4 DUP4 PUSH1 0x0 JUMPDEST DUP4 DUP2 LT ISZERO PUSH2 0x9B JUMPI DUP1 DUP3 ADD MLOAD DUP2 DUP5 ADD MSTORE PUSH1 0x20 DUP2 ADD SWAP1 POP PUSH2 0x80 JUMP JUMPDEST POP POP POP POP SWAP1 POP SWAP1 DUP2 ADD SWAP1 PUSH1 0x1F AND DUP1 ISZERO PUSH2 0xC8 JUMPI DUP1 DUP3 SUB DUP1 MLOAD PUSH1 0x1 DUP4 PUSH1 0x20 SUB PUSH2 0x100 EXP SUB NOT AND DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP JUMPDEST POP SWAP3 POP POP POP PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x60 PUSH1 0x40 DUP1 MLOAD SWAP1 DUP2 ADD PUSH1 0x40 MSTORE DUP1 PUSH1 0x5 DUP2 MSTORE PUSH1 0x20 ADD PUSH32 0x48656C6C6F000000000000000000000000000000000000000000000000000000 DUP2 MSTORE POP SWAP1 POP SWAP1 JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 SLT 0xec 0xe 0xf5 0xf8 SLT 0xc7 0x2d STATICCALL ADDRESS SHR 0xdb COINBASE 0xb1 BALANCE 0xe8 0xf8 DUP14 0xda 0xad DUP13 LOG1 0x4c 0xb4 0x26 0xc2 DELEGATECALL PUSH7 0x8994D3E002900
 ```
 
-Ils sont appelés **codes d'opérations**. Les codes d'opérations sont les instructions de bas niveau que la machine virtuelle Ethereum (EVM) peut exécuter. Chaque code d'opération représente une opération spécifique, comme des opérations arithmétiques, des opérations logique, des manipulations de données, des flux de contrôle, etc.
+इन्हें **ऑपकोड कहा जाता है**। EVM ऑपकोड निम्न-स्तरीय निर्देश हैं जिन्हें एथेरियम वर्चुअल मशीन (EVM) निष्पादित कर सकता है। प्रत्येक ऑपकोड एक विशिष्ट संचालन का प्रतिनिधित्व करता है, जैसे अंकगणितीय संचालन, तार्किक संचालन, डेटा हेरफेर, नियंत्रण प्रवाह आदि।
 
-[En savoir plus sur les codes d'opérations](/developers/docs/evm/opcodes/)
+[ऑपकोड पर अधिक](/developers/docs/evm/opcodes/)
 
-## Applications Web {#web-applications}
+## वेब एप्लिकेशन {#web-applications}
 
-Le compilateur produira également l'**interface binaire-programme (ABI)** dont vous avez besoin pour que votre application comprenne le contrat et appelle ses fonctions.
+कंपाइलर **एप्लिकेशन बाइनरी इंटरफेस (ABI)** का भी उत्पादन करेगा, जिसकी आवश्यकता आपके एप्लिकेशन को अनुबंध को समझने और अनुबंध के फंक्शन को कॉल करने के लिए होगी।
 
-L'ABI est un fichier JSON qui décrit le contrat déployé et ses fonctions de contrat intelligent. Cela aide à combler le fossé entre Web2 et Web3
+ABI एक JSON फ़ाइल है जो परिनियोजित अनुबंध और इसके स्मार्ट अनुबंध फंक्शंस का वर्णन करती है। यह web2 और web3 के बीच की खाई को पाटने में मदद करता है
 
-Une [bibliothèque cliente JavaScript](/developers/docs/apis/javascript/) va lire l'**ABI** afin de vous laisser appeler votre contrat intelligent dans l'interface de votre application Web.
+एक [JavaScript क्लाइंट लाइब्रेरी](/developers/docs/apis/javascript/) आपके वेब ऐप के इंटरफ़ेस में अपने स्मार्ट अनुबंध पर कॉल करने के लिए **ABI** पढ़ेगी।
 
-Vous trouverez ci-dessous l’ABI pour le contrat de jetons ERC-20. Un jeton ERC-20 est un jeton que vous pouvez échanger sur Ethereum.
+नीचे ERC-20 टोकन अनुबंध के लिए ABI है। ERC-20 एक टोकन है जिसे आप एथेरियम पर ट्रेड कर सकते हैं।
 
 ```json
 [
@@ -272,11 +272,11 @@ Vous trouverez ci-dessous l’ABI pour le contrat de jetons ERC-20. Un jeton ERC
 ]
 ```
 
-## Complément d'information {#further-reading}
+## अग्रिम पठन {#further-reading}
 
-- [Spécification ABI](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html) _- Solidity_
+- [ABI विनिर्देश](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html) _– Solidity_
 
-## Sujets connexes {#related-topics}
+## संबंधित विषय {#related-topics}
 
-- [Bibliothèques clientes JavaScript](/developers/docs/apis/javascript/)
-- [Machine virtuelle Ethereum (EVM)](/developers/docs/evm/)
+- [JavaScript क्लाइंट लाइब्रेरी](/developers/docs/apis/javascript/)
+- [एथेरियम वर्चुअल मशीन](/developers/docs/evm/)

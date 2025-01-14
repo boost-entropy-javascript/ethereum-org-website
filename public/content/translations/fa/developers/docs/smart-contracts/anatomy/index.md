@@ -1,22 +1,22 @@
 ---
-title: Anatomie des contrats intelligents
-description: 'Examen approfondi des composantes d''un contrat intelligent : les fonctions, les données et les variables.'
-lang: fr
+title: آناتومی قراردادهای هوشمند
+description: یک نگاه عمیق به آناتومی قرارداد هوشمند - توابع، داده‌ها و متغیرها.
+lang: fa
 ---
 
-Les contrats intelligents sont des programmes qui s'exécutent à une adresse sur Ethereum. Ils sont constitués de données et de fonctions qui peuvent s'exécuter lors de la réception d'une transaction. Cette page explique la composition d'un contrat intelligent.
+قرارداد هوشمند برنامه ای است که در آدرسی در اتریوم اجرا می شود. آنها از داده ها و توابعی تشکیل شده اند که می توانند هنگام دریافت تراکنش اجرا شوند. در اینجا یک نمای کلی از آنچه که یک قرارداد هوشمند را تشکیل می دهد آورده شده است.
 
-## Prérequis {#prerequisites}
+## پیش‌نیازها {#prerequisites}
 
-Assurez-vous de commencer par lire la page [Contrats intelligents](/developers/docs/smart-contracts/). Ce document part du principe que vous êtes déjà familiarisé avec des langages de programmation comme JavaScript ou Python.
+مطمئن شوید که ابتدا درباره‌ [قراردادهای هوشمند](/developers/docs/smart-contracts/) بخوانید. این سند فرض می کند که شما قبلاً با زبان های برنامه نویسی مانند جاوا اسکریپت یا پایتون آشنا هستید.
 
-## Données {#data}
+## داده‌‌ها {#data}
 
-Toute donnée relative à un contrat doit être affectée à un emplacement : soit `storage` soit `memory`. Il est coûteux de modifier le stockage dans un contrat intelligent. Vous devez donc décider de l'endroit où vous souhaitez conserver vos données.
+هر گونه داده‌ قرارداد باید به مکانی اختصاص داده شود: یا به `حافظه` یا `مموری`. تغییر فضای ذخیره‌سازی در یک قرارداد هوشمند پرهزینه است، بنابراین باید در نظر بگیرید که داده های شما در کجا قرار دارند.
 
-### Stockage {#storage}
+### ذخیره‌سازی {#storage}
 
-Les données persistantes sont appelées stockage et sont représentées par des variables d'état. Ces valeurs sont stockées en permanence sur la blockchain. Vous devez déclarer le type afin que le contrat puisse garder une trace de la quantité de stockage nécessaire sur la blockchain quand il compile.
+داده های پایدار به عنوان ذخیره‌سازی نامیده می شوند و با متغیرهای وضعیت نمایش داده می شوند. این مقادیر به طور دائم در زنجیره بلوکی ذخیره می شوند. باید نوع آن را اعلام کنید تا قرارداد بتواند در هنگام کامپایل کردن زنجیره بلوکی میزان فضای ذخیره‌سازی مورد نیاز خود را پیگیری کند.
 
 ```solidity
 // Solidity example
@@ -31,63 +31,63 @@ contract SimpleStorage {
 storedData: int128
 ```
 
-Si vous avez déjà programmé des langages orientés objet, vous serez probablement familiarisé avec la plupart des types. Cependant, le type `address` devrait être nouveau pour vous si vous commencez à développer pour Ethereum.
+اگر قبلاً زبان های شی‌گرا را برنامه ریزی کرده اید، احتمالاً با بیشتر انواع آن آشنا خواهید بود. با این حال، اگر در توسعه اتریوم تازه‌کار هستید، `آدرس` باید برای شما جدید باشد.
 
-Un type `address ` peut contenir une adresse Ethereum qui équivaut à 20 octets ou 160 bits, ce qui donne une adresse en notation hexadécimale commençant par 0x.
+یک نوع `آدرس` می‌تواند یک آدرس اتریوم را که برابر با 20 بایت یا 160 بیت است، در خود جای دهد. در نماد هگزادسیمال (مبنای ۱۶) با 0x در ابتدا برمی گردد.
 
-Les autres types incluent les :
+انواع دیگر شامل موارد زیر است:
 
-- booléens ;
-- nombres entiers ;
-- numéros de points fixes ;
-- tableaux d'octets de taille fixe ;
-- tableaux d'octets de taille dynamique ;
-- littéraux rationnels et entiers ;
-- littéraux de chaîne ;
-- nombres hexadécimaux ;
-- énumérations.
+- Boolean
+- عدد صحیح
+- اعداد با نقطه ثابت
+- آرایه بایتی با سایز ثابت
+- آرایه بایتی با سایز پویا
+- لیترال صحیح و منطقی
+- لیترال‌های رشته‌ای
+- اعداد هگز
+- اینام ها
 
-Pour plus d'explications, consultez les pages ci-dessous :
+برای توضیحات بیشتر نگاهی به اسناد بیاندازید:
 
-- [Types Vyper](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
-- [Types Solidity](https://solidity.readthedocs.io/en/latest/types.html#value-types)
+- [نوع‌های Vyper را ببینید](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
+- [نوع‌های Solidity را ببینید](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
-### Mémoire {#memory}
+### مموری {#memory}
 
-Les valeurs qui ne sont stockées que pendant la durée de l'exécution d'une fonction de contrat sont appelées variables de mémoire. Celles-ci n'étant pas stockées de façon permanente sur la blockchain, elles sont donc moins chères à utiliser.
+مقادیری که فقط برای طول عمر اجرای یک تابع قرارداد ذخیره می شوند، متغیرهای مموری نامیده می شوند. از آنجایی که این ها به طور دائم در زنجیره بلوکی ذخیره نمی شوند، استفاده از آنها بسیار ارزان‌تر است.
 
-Pour en savoir plus sur la façon dont l'EVM conserve les données (stockage, mémoire et pile) consultez la documentation [Solidity](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
+در [مستندات Solidity](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack) درباره‌ی چگونگی نگهداری داده‌ها (حافظه، مموری و پشته) در ماشین مجازی اتریوم بیاموزید.
 
-### Variables d'environnement {#environment-variables}
+### متغیرهای محیطی {#environment-variables}
 
-En plus des variables que vous définissez sur votre contrat, il existent quelques variables globales spéciales. Elles sont principalement utilisées pour fournir des informations sur la blockchain ou la transaction en cours.
+علاوه بر متغیرهایی که در قرارداد خود تعریف می کنید، چند متغیر جهانی ویژه نیز وجود دارد. آنها در درجه اول برای ارائه اطلاعات در مورد زنجیره بلوکی یا تراکنش فعلی استفاده می شوند.
 
-Exemples :
+مثال ها:
 
-| **Propriété**     | **Variable d'état** | **Description**                         |
-| ----------------- | ------------------- | --------------------------------------- |
-| `block.timestamp` | uint256             | Horodatage de la période du bloc actuel |
-| `msg.sender`      | address             | Expéditeur du message (appel en cours)  |
+| **ابزار**         | **متغیر حالت** | **توضیح**                      |
+| ----------------- | -------------- | ------------------------------ |
+| `block.timestamp` | uint256        | برچسب زمان ایپوک بلوک فعلی     |
+| `msg.sender`      | آدرس           | فرستنده‌ی پیام (فراخوانی فعلی) |
 
-## Fonctions {#functions}
+## توابع {#functions}
 
-En termes simples, les fonctions peuvent obtenir ou définir des informations en réponse à des transactions entrantes.
+به ساده‌ترین شکل، توابع می‌توانند اطلاعات دریافت کنند یا اطلاعات را در پاسخ به تراکنش‌های دریافتی تنظیم کنند.
 
-Il existe deux types d'appels de fonctions :
+دو نوع فراخوانی تابع وجود دارد:
 
-- `internal` - Ces fonctions ne créent pas d'appel EVM
-  - Les fonctions internes et les variables d'état ne peuvent être accédées qu'en interne (c'est-à-dire à partir du contrat actuel ou des contrats qui en découlent)
-- `external` - Ces fonctions créent un appel EVM
-  - Les fonctions externes font partie de l'interface du contrat, ce qui signifie qu'elles peuvent être appelées à partir d'autres contrats et via des transactions. Une fonction externe `f` ne peut pas être appelée en interne (par ex., `f()` ne fonctionne pas, mais `this.f()` fonctionne).
+- `داخلی` - این‌ها یک فراخوانی ماشین مجازی اتریوم را نمی‌سازند
+  - توابع داخلی و متغیرهای حالت فقط به صورت داخلی قابل دسترسی هستند (یعنی از داخل قرارداد فعلی یا قراردادهای ناشی از آن)
+- `خارجی` - این‌ها یک فراخوان ماشین مجازی اتریوم را می‌سازند
+  - توابع خارجی بخشی از رابط قرارداد هستند، به این معنی که می توان آنها را از قراردادهای دیگر و از طریق تراکنش ها فراخوانی کرد. یک تابع خارجی `f` نمی‌تواند به صورت داخلی فراخوانی شود (یعنی `f()` کار نمی‌کند اما `this.f()` کار می‌کند.
 
-Elles peuvent également être de type `public` ou `private`
+توابع می‌توانند `عمومی` یا `خصوصی` باشند
 
-- Les fonctions `public` peuvent être appelées en interne à l'intérieur du contrat ou à l'extérieur via des messages
-- Les fonctions `private` ne sont visibles que pour le contrat dans lequel elles sont définies et non dans les contrats dérivés
+- توابع `عمومی` می‌توانند به صورت داخلی از داخل قرارداد و به صورت خارجی با پیام‌ها فراخوانی شوند
+- توابع `خصوصی` فقط برای خود قرارداد قابل مشاهده هستند و دیگر قراردادها آن را نمی‌بینند
 
-Les fonctions et les variables d'état peuvent être rendues publiques ou privées
+هم تابع ها و هم متغیرهای حالت را می توان عمومی یا خصوصی کرد
 
-Voici une fonction pour mettre à jour une variable d'état sur un contrat :
+در اینجا یک تابع برای به روز رسانی یک متغیر حالت در یک قرارداد آمده است:
 
 ```solidity
 // Solidity example
@@ -96,13 +96,13 @@ function update_name(string value) public {
 }
 ```
 
-- Le paramètre `value` de type `string` est passé dans la fonction : `update_name`.
-- Il est déclaré `public`, ce qui signifie que n'importe qui peut y accéder.
-- Il n'est pas déclaré comme `view`, il peut donc modifier l'état du contrat
+- پارامتر `value` از نوع `رشته` به تابع `update_name` داده می‌شود
+- به شکل `عمومی` اعلام شده، به این معنی که هر کسی می‌تواند به آن دسترسی داشته باشد
+- به شکل `view` اعلام نشده، بنابراین می تواند وضعیت قرارداد را تغییر دهد
 
-### Voir les fonctions {#view-functions}
+### توابع View {#view-functions}
 
-Ces fonctions promettent de ne pas modifier l’état des données du contrat. Les exemples courants sont les fonctions « getter » - vous pouvez utiliser ceci pour obtenir le solde d'un utilisateur par exemple.
+این توابع قرار است وضعیت داده های قرارداد را تغییر ندهند. مثال‌های رایج توابع «getter» هستند – برای مثال می‌توانید از آن برای دریافت موجودی کاربر استفاده کنید.
 
 ```solidity
 // Solidity example
@@ -120,20 +120,20 @@ def readName() -> string:
   return dappName
 ```
 
-Voici ce qui est considéré comme une modification d'état :
+آنچه حالت اصلاحی در نظر گرفته می شود:
 
-1. Écriture dans les variables d'état
-2. [Émission d'événements](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events)
-3. [Création d'autres contrats](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts)
-4. Utilisation d'`autodestruct`
-5. Envoi d'ether via des appels
-6. Appel d'une fonction non marquée `view` ni `pure`
-7. Utilisation d'appels de bas niveau
-8. Utilisation d'un assemblage en ligne conteant certains opcodes
+1. نوشتن بر روی متغیرهای حالت.
+2. [بیرون دادن رویدادها](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events).
+3. [ساختن دیگر قراردادها](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts).
+4. استفاده از `selfdestruct`.
+5. فرستادن اتر از طریق فراخوانی‌ها.
+6. فراخوانی هر تابعی که `view` یا `pure` نباشد.
+7. استفاده از فراخوانی‌های سطح پایین.
+8. استفاده از اسمبلی به صورت درخط که شامل کدگذاری های خاصی باشد.
 
-### Fonctions du constructeur {#constructor-functions}
+### توابع سازنده {#constructor-functions}
 
-Les fonctions `constructor` ne sont exécutées qu'une seule fois lors du premier déploiement du contrat. Comme `constructor` dans de nombreux langages de programmation basés sur des classes, ces fonctions initialisent souvent les variables d'état à leurs valeurs spécifiées.
+توابع `constructor` فقط یک بار زمانی که قرارداد برای اولین بار ساخته می‌شود اجرا می‌شوند. مانند `constructor` در بسیاری از زبان های برنامه نویسی مبتنی بر کلاس، این توابع اغلب متغیرهای حالت را به مقادیر مشخص شده خود مقداردهی اولیه می کنند.
 
 ```solidity
 // Solidity example
@@ -158,23 +158,23 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### Fonctions intégrées {#built-in-functions}
+### توابع Built-in {#built-in-functions}
 
-En plus des variables et des fonctions que vous définissez pour votre contrat, il existe des fonctions spéciales intégrées. Exemple le plus évident :
+علاوه بر متغیرها و توابعی که در قرارداد خود تعریف می کنید، چند تابع داخلی ویژه نیز وجود دارد. بدیهی‌ترین مثال این است:
 
 - `address.send()` - Solidity
-- `send(address)` - Vyper
+- `send(address)` – Vyper
 
-Celles-ci permettent aux contrats d’envoyer des ETH à d’autres comptes.
+اینها به قراردادها اجازه می دهد اتر را به حساب های دیگر ارسال کنند.
 
-## Fonctions d'écriture {#writing-functions}
+## توابع Writing {#writing-functions}
 
-Votre fonction a besoin des éléments suivants :
+تابع شما به موارد زیر نیاز دارد:
 
-- Paramètre variable et type (si elle accepte des paramètres)
-- Déclaration de fonction internal/external
-- Déclaration de fonction pure/view/payable
-- Type de renvoi (si elle renvoie une valeur)
+- متغیر پارامتر و نوع (در صورت پذیرش پارامترها)
+- اعلامیه داخلی/خارجی
+- اعلامیه‌ی خالص/نما/قابل پرداخت
+- نوع بازگشت ها ( اگر که مقداری را برمی‌گرداند)
 
 ```solidity
 pragma solidity >=0.4.0 <=0.6.0;
@@ -199,17 +199,17 @@ contract ExampleDapp {
 }
 ```
 
-Un contrat complet pourrait ressembler à cela. Ici la fonction `constructor` fournit une valeur initiale pour la variable `dapp_name`.
+یک قرارداد کامل ممکن است چیزی شبیه به این باشد. در اینجا تابع `constructor` یک مقدار اولیه برای متغیر `dapp_name` ارائه می‌کند.
 
-## Événements et journaux {#events-and-logs}
+## رویدادها و گزارش‌ها {#events-and-logs}
 
-Les événements permettent à votre contrat intelligent de communiquer avec votre frontend ou d'autres applications abonnées. Une fois qu'une transaction est validée et ajoutée à un bloc, les contrats intelligents peuvent émettre des événements et enregistrer des informations, que le frontend peut ensuite traiter et utiliser.
+رویدادها، قراردادهای هوشمند شما را قادر به برقراری ارتباط با فرانت اند یا سایر اپلیکیشن هایی که نیاز به کسب اطلاع از وقایع درون قرارداد هوشمند دارند می کنند. هنگامی که یک تراکنش اعتبارسنجی شده و به یک بلاک اضافه می شود، قراردادهای هوشمند می توانند رویدادها را نمایش داده و اصطلاحاً ساتع کنند و لاگ اطلاعات را چاپ کنند، بدین ترتیب فرانت اند می تواند اطلاعاتی که ساتع شده را پردازش کرده و آن را به کار بگیرد.
 
-## Exemples annotés {#annotated-examples}
+## نمونه های مشروح {#annotated-examples}
 
-Voici quelques exemples rédigés en Solidity. Si vous souhaitez jouer avec le code, vous pouvez interagir avec dans [Remix](http://remix.ethereum.org).
+اینها نمونه هایی هستند که در Solidity نوشته شده اند. اگر می‌خواهید با کد بازی کنید، می‌توانید در [Remix](http://remix.ethereum.org) با آنها تعامل داشته باشید.
 
-### Hello world {#hello-world}
+### سلام دنیا {#hello-world}
 
 ```solidity
 // Specifies the version of Solidity, using semantic versioning.
@@ -219,6 +219,9 @@ pragma solidity ^0.5.10;
 // Defines a contract named `HelloWorld`.
 // A contract is a collection of functions and data (its state).
 // Once deployed, a contract resides at a specific address on the Ethereum blockchain.
+// Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+contract HelloWorld {
+
     // Declares a state variable `message` of type `string`.
     // State variables are variables whose values are permanently stored in contract storage.
     // The keyword `public` makes variables accessible from outside a contract
@@ -227,13 +230,11 @@ pragma solidity ^0.5.10;
 
     // Similar to many class-based object-oriented languages, a constructor is
     // a special function that is only executed upon contract creation.
-
     // Constructors are used to initialize the contract's data.
     // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
     constructor(string memory initMessage) public {
         // Accepts a string argument `initMessage` and sets the value
         // into the contract's `message` storage variable).
-
         message = initMessage;
     }
 
@@ -245,7 +246,7 @@ pragma solidity ^0.5.10;
 }
 ```
 
-### Jeton {#token}
+### توکن {#token}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -270,7 +271,6 @@ contract Token {
     // to the address of the contract creator.
     constructor() public {
         // All smart contracts rely on external transactions to trigger its functions.
-
         // `msg` is a global variable that includes relevant data on the given transaction,
         // such as the address of the sender and the ETH value included in the transaction.
         // Learn more: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
@@ -309,7 +309,7 @@ contract Token {
 }
 ```
 
-### Actif numérique unique {#unique-digital-asset}
+### دارایی دیجیتال منحصربفرد {#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -626,10 +626,10 @@ contract CryptoPizza is IERC721, ERC165 {
         uint256 size;
         // Currently there is no better way to check if there is a contract in an address
         // than to check the size of the code at that address.
-        // Voir https://ethereum.stackexchange.com/a/14016/36603
-        // pour plus de détails sur le fonctionnement.
-        // TODO Vérifiez cela à nouveau avant la version Serenity, car toutes les adresses seront alors contractuelles
-        // .
+        // به https://ethereum.stackexchange.com/a/14016/36603 مراجعه کنید
+         // برای جزئیات بیشتر در مورد نحوه کار این.
+        // TODO قبل از انتشار Serenity دوباره این مورد را بررسی کنید، زیرا همه آدرس ها خواهند بود
+         // سپس قرارداد می بندد.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)
@@ -639,20 +639,20 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## Complément d'information {#further-reading}
+## بیشتر بخوانید {#further-reading}
 
-Consultez la documentation Solidity et Vyper pour une vue d'ensemble plus complète des contrats intelligents :
+برای بررسی کاملتر قراردادهای هوشمند، مستندات Solidity و Vyper را بررسی کنید:
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
-## Sujets connexes {#related-topics}
+## موضوعات مرتبط {#related-topics}
 
-- [Contrats intelligents](/developers/docs/smart-contracts/)
-- [Machine virtuelle Ethereum (EVM)](/developers/docs/evm/)
+- [قرارداد‌های هوشمند](/developers/docs/smart-contracts/)
+- [ماشین مجازی اتریوم](/developers/docs/evm/)
 
-## Tutoriels connexes {#related-tutorials}
+## آموزش‌های مرتبط {#related-tutorials}
 
-- [Réduire les contrats pour respecter la limite de taille](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _ - Quelques conseil pratiques pour réduire la taille de votre contrat intelligent_
-- [Consigner les données des contrats intelligents avec des événements](/developers/tutorials/logging-events-smart-contracts/) _- Introduction aux événements de contrats intelligents et comment vous pouvez les utiliser pour consigner les données_
-- [Interagir avec d'autres contrats Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _- Comment déployer et interagir avec un contrat intelligent à partir d'un contrat existant_
+- [کوچک کردن قراردادها برای مبارزه با محدودیت اندازه قرارداد](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _ – چند نکته کاربردی برای کاهش اندازه قرارداد هوشمند شما._
+- [گزارش داده‌های قراردادهای هوشمند با رویدادها](/developers/tutorials/logging-events-smart-contracts/) _– مقدمه‌ای بر رویدادهای قرارداد هوشمند و چگونگی استفاده از آنها برای ثبت داده ها_
+- [تعامل با سایر قراردادهای Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– نحوه استقرار هوشمند قرارداد از یک قرارداد موجود و تعامل با آن._
