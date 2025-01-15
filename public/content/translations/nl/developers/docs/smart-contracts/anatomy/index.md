@@ -1,22 +1,22 @@
 ---
-title: スマートコントラクトの解剖学
-description: スマートコンタクトの構造、すなわち機能、データ、変数について詳しく調べます。
-lang: ja
+title: Anatomie van smart contracts
+description: 'Een diepgaande kijk op de anatomie van een smart contact: de functies, gegevens en variabelen.'
+lang: nl
 ---
 
-スマートコントラクトは、イーサリアム上のアドレスで実行されるプログラムです。 それらはトランザクションの受信時に実行できるデータと関数で構成されています。 ここでは、スマートコントラクトの構成要素の概要を説明します。
+Een smart contract is een programma dat op een adres op Ethereum wordt uitgevoerd. Ze bestaan uit gegevens en functies die kunnen worden uitgevoerd na ontvangst van een transactie. Hier is een overzicht van waaruit een smart contract bestaat.
 
-## 前提知識 {#prerequisites}
+## Vereisten {#prerequisites}
 
-最初に、[スマートコントラクト](/developers/docs/smart-contracts/)を必ずお読みください。 このドキュメントは、JavaScriptやPythonなどのプログラミング言語に精通していることを前提としています。
+Zorg ervoor dat u zich eerst heeft ingelezen over [smart contracts](/developers/docs/smart-contracts/). Dit document gaat ervan uit dat u al bekend bent met programmeertalen zoals JavaScript of Python.
 
-## データ {#data}
+## Gegevens {#data}
 
-すべてのコントラクトのデータは、`storage`または`memory`のいずれかのロケーションに割り当てる必要があります。 スマートコントラクトのストレージの変更にはコストがかかりますので、データをどこに格納するかを考える必要があります。
+Alle contractgegevens moeten worden toegewezen aan een locatie: ofwel aan `storage` of `memory`. Het is duur om de opslag in een smart contract aan te passen, dus denk zeker na over waar uw gegevens moeten worden opgeslagen.
 
-### ストレージ {#storage}
+### Opslag {#storage}
 
-永続データはストレージと呼ばれ、状態変数で表されます。 これらの値は、ブロックチェーンに永続的に保存されます。 コントラクトがコンパイル時に必要なブロックチェーンのストレージ容量を追跡できるように、型を宣言する必要があります。
+Persistente gegevens worden opslag genoemd en worden weergegeven door statusvariabelen. Deze waarden worden permanent opgeslagen op de blockchain. U moet het type aangeven, zodat het contract kan bijhouden hoeveel opslagruimte het nodig heeft op de blockchain wanneer het wordt gecompileerd.
 
 ```solidity
 // Solidity example
@@ -31,63 +31,63 @@ contract SimpleStorage {
 storedData: int128
 ```
 
-オブジェクト指向言語でのプログラミングの経験がある場合は、ほとんどの型になじみがあるでしょう。 しかし、イーサリアムの開発が初めての場合、`address`は目新しいかもしれません。
+Als u al eens geprogrammeerd hebt in objectgeoriënteerde talen, zult u waarschijnlijk bekend zijn met de meeste types. Maar `address` zou nieuw voor u moeten zijn als u nieuw bent in de ontwikkeling van Ethereum.
 
-`address`型は、20バイトまたは160ビットに相当するイーサリアムアドレスを保持します。 先頭が0xの16進数を返します。
+Een `address`-type kan een Ethereum-adres bevatten dat gelijk is aan 20 bytes of 160 bits. Het komt terug in hexadecimale notatie met een leidende 0x.
 
-その他の型には次のものがあります。
+Andere types zijn:
 
-- ブール値
-- 整数
-- 固定小数点数
-- 固定サイズのバイト配列
-- 動的サイズのバイト配列
-- 有理数リテラルと整数リテラル
-- 文字列リテラル
-- 16進数リテラル
-- 列挙型
+- booleaans
+- heel getal
+- vastepuntgetallen
+- byte-arrays met vaste grootte
+- byte-arrays van dynamische grootte
+- Rationale en gehele getallen
+- Stringliteralen
+- Hexadecimale literalen
+- Opsommingen
 
-詳細については、以下のドキュメントをご覧ください。
+Bekijk de documentatie voor meer uitleg:
 
-- [Vyperの型を見る](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
-- [Solidityの型を見る](https://solidity.readthedocs.io/en/latest/types.html#value-types)
+- [Zie Vyper-types](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
+- [Zie Solidity-types](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
-### メモリ {#memory}
+### Geheugen {#memory}
 
-コントラクト関数の実行期間にのみ保存される値は、メモリ変数と呼ばれます。 これらはブロックチェーンに永続的に保存されることはないため、低コストで使用できます
+Waarden die alleen worden opgeslagen zolang een contractfunctie wordt uitgevoerd, worden geheugenvariabelen genoemd. Omdat deze niet permanent op de blockchain worden opgeslagen, zijn ze veel goedkoper in gebruik.
 
-EVMがデータ(ストレージ、メモリ、スタック)を格納する方法の詳細については、[Solidityのドキュメント](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack)をご覧ください。
+Ontdek meer over hoe de EVM gegevens opslaat (opslag, geheugen en de stack) in de [Solidity-documentatie](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
-### 環境変数 {#environment-variables}
+### Omgevingsvariabelen {#environment-variables}
 
-コントラクトで定義した変数に加え、特別なグローバル変数がいくつかあります。 これらは主にブロックチェーンや現在のトランザクションに関する情報を提供するために使用されます。
+Naast de variabelen die u definieert op uw contract, zijn er enkele speciale globale variabelen. Ze worden voornamelijk gebruikt om informatie te geven over de blockchain of de huidige transactie.
 
-例:
+Voorbeelden:
 
-| **プロパティ**         | **状態変数** | **説明**             |
-| ----------------- | -------- | ------------------ |
-| `block.timestamp` | uint256  | 現在のブロックエポックタイムスタンプ |
-| `msg.sender`      | address  | メッセージの送信者(現在の呼び出し) |
+| **Attribuut**     | **Statusvariabele** | **Beschrijving**                          |
+| ----------------- | ------------------- | ----------------------------------------- |
+| `block.timestamp` | uint256             | Tijdstempel huidige block-epoch           |
+| `msg.sender`      | address             | Afzender van het bericht (huidige oproep) |
 
-## 関数 {#functions}
+## Functies {#functions}
 
-簡単に言うと、関数は受信トランザクションに応じて情報を取得したり、情報を設定したりすることができます。
+In de meest eenvoudige bewoordingen kunnen functies informatie krijgen of informatie instellen als reactie op binnenkomende transacties.
 
-関数呼び出しには、以下の2種類があります。
+Er zijn twee soorten functie-oproepen:
 
-- `internal` - これらはEVM呼び出しを作成しません。
-  - internal関数と状態変数は、内部(つまり、現在のコントラクト内またはそれから派生したコントラクト内)からのみアクセスできます。
-- `external` - これらはEVM呼び出しを作成します。
-  - external関数はコントラクトインターフェイスの一部であり、他のコントラクトから呼び出したり、トランザクションを介して呼び出したりすることができます。 external関数`f`を内部で呼び出すことはできません(つまり、`f()`は動作しませんが、`this.f()`は動作します)。
+- `internal` - deze maken geen EVM-oproep aan
+  - Interne functies en statusvariabelen zijn alleen intern toegankelijk (d.w.z. vanuit het huidige contract of contracten die hiervan zijn afgeleid)
+- `external` - deze maken een EVM-oproep aan
+  - Externe functies maken deel uit van de contractinterface, wat betekent dat ze kunnen worden opgeroepen vanuit andere contracten en via transacties. Een externe functie `f` kan niet intern worden opgeroepen (d.w.z. `f()` werkt niet, maar `this.f()` werkt wel).
 
-`public`または`private`にすることもできます。
+Ze kunnen ook `public` of `private` zijn
 
-- `public`関数は、コントラクト内から内部で呼び出すことも、メッセージを介して外部から呼び出すこともできます。
-- `private`関数は、それらが定義されているコントラクトからのみ参照できます。派生したコントラクトからは参照できません。
+- `public`-functies kunnen intern worden opgeroepen vanuit het contract of extern via berichten
+- `private`-functies zijn alleen zichtbaar voor het contract waarin ze zijn gedefinieerd en niet in afgeleide contracten
 
-関数と状態変数はどちらもpublicまたはprivateにすることができます。
+Zowel functies als statusvariabelen kunnen openbaar of persoonlijk worden gemaakt
 
-コントラクトの状態変数を更新するための関数は次のとおりです。
+Hier is een functie voor het bijwerken van een statusvariabele op een contract:
 
 ```solidity
 // Solidity example
@@ -96,13 +96,13 @@ function update_name(string value) public {
 }
 ```
 
-- `string`型のパラメータ`value`が`update_name`関数に渡されます。
-- `public`と宣言されており、誰でもアクセスできます。
-- `view`が宣言されていないため、コントラクトの状態を変更できます。
+- De parameter `value` van het type `string` wordt doorgegeven aan de functie: `update_name`
+- Het is `public` verklaard, wat betekent dat iedereen er toegang toe heeft
+- Het is niet gedeclareerd als `view`, dus het kan de contractstatus wijzigen
 
-### View関数 {#view-functions}
+### Bekijk functies {#view-functions}
 
-これらの関数によって、コントラクトのデータの状態を変更しないことを指定します。 一般的な例としては、「getter」関数があります。例えば、これを使用してユーザーの残高を受け取ることができます。
+Deze functies beloven dat ze de status van de gegevens van het contract niet zullen wijzigen. Gebruikelijke voorbeelden zijn "getter"-functies. Deze kunnen bijvoorbeeld gebruikt worden om het saldo van een gebruiker op te vragen.
 
 ```solidity
 // Solidity example
@@ -120,20 +120,20 @@ def readName() -> string:
   return dappName
 ```
 
-状態の変更と見なされるものは、以下のとおりです。
+Wat wordt beschouwd als de status wijzigen:
 
-1. 状態変数への書き込み。
-2. [イベントの発行](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events)。
-3. [他のコントラクトの作成](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts)。
-4. `selfdestruct`の使用。
-5. 呼び出しによるイーサ(ETH)の送信。
-6. `view`や`pure`が指定されていない関数の呼び出し。
-7. 低レベル呼び出しの使用。
-8. 特定のオペコードを含むインラインアセンブリの使用。
+1. Schrijven naar statusvariabelen.
+2. [Evenementen uitzenden](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events).
+3. [Andere contracten aanmaken](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts).
+4. `selfdestruct` gebruiken.
+5. Ether versturen via oproepen.
+6. Een functie oproepen die niet is gemarkeerd als `view` of `pure`.
+7. Oproepen op laag niveau gebruiken.
+8. Gebruik van inline assembly die bepaalde opcodes bevat.
 
-### コンストラクタ関数 {#constructor-functions}
+### Constructorfuncties {#constructor-functions}
 
-`constructor`関数は、コントラクトが最初にデプロイされたときに1回だけ実行されます。 多くのクラスベースのプログラミング言語の`constructor`と同様に、これらの関数はしばしば、指定された値に状態変数を初期化します。
+`constructor`-functies worden slechts uitgevoerd wanneer het contract voor het eerst wordt ingezet. Net als `constructor` in veel op klasse gebaseerde programmeertalen, initialiseren deze functies vaak statusvariabelen naar hun gespecificeerde waarden.
 
 ```solidity
 // Solidity example
@@ -158,23 +158,23 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### 組み込み関数 {#built-in-functions}
+### Ingebouwde functies {#built-in-functions}
 
-コントラクトで定義した変数と関数に加え、特別な組み込み関数がいくつかあります。 最もわかりやすい例は、以下のとおりです。
+Naast de variabelen en functies die u definieert op uw contract, zijn er enkele speciale ingebouwde functies. Het meest voor de hand liggende voorbeeld is:
 
 - `address.send()` – Solidity
 - `send(address)` – Vyper
 
-これらの関数により、コントラクトは他のアカウントにETHを送信することができます。
+Hiermee kunnen contracten ETH naar andere accounts sturen.
 
-## 関数を書く {#writing-functions}
+## Schrijffuncties {#writing-functions}
 
-関数には以下のものが必要です。
+Uw functiebehoeften:
 
-- パラメータ変数と型(パラメータを受け取る場合)
-- internal/externalの宣言
-- pure/view/payableの宣言
-- 戻り値の型(値を返す場合)
+- parametervariabele en type (als het parameters accepteert)
+- verklaring van internal/external
+- verklaring van pure/view/payable
+- teruggavetype (als het een waarde teruggeeft)
 
 ```solidity
 pragma solidity >=0.4.0 <=0.6.0;
@@ -199,17 +199,17 @@ contract ExampleDapp {
 }
 ```
 
-完全なコントラクトはこのようになります。 ここで、`constructor`関数は、`dapp_name`変数の初期値を提供します。
+Een volledig contract zou er ongeveer zo uit kunnen zien. Hier geeft de functie `constructor` een beginwaarde voor de variabele `dapp_name`.
 
-## イベントとログ {#events-and-logs}
+## Evenementen en logs {#events-and-logs}
 
-イベントは、スマートコントラクトがフロントエンドや他のサブスクライブしているアプリケーションと通信することを可能にします。 トランザクションが検証されてブロックに追加されると、スマートコントラクトはイベントを発行し、情報をログに記録できます。これをフロントエンドが処理して活用します。
+Evenementen zorgen ervoor dat uw smart contract kan communiceren met uw frontend of andere applicaties die zich abonneren. Zodra een transactie is gevalideerd en toegevoegd aan een block, kunnen smart contracts evenementen en loginformatie uitzenden, die de frontend vervolgens kan verwerken en gebruiken.
 
-## 注釈付きの例 {#annotated-examples}
+## Geannoteerde voorbeelden {#annotated-examples}
 
-Solidityで書かれた例を以下に示します。 コードを実行したい場合は、[Remix](http://remix.ethereum.org)で操作できます。
+Dit zijn enkele voorbeelden die geschreven zijn in Solidity. Als u met de code wilt spelen, kunt u er interactie meer hebben in [Remix](http://remix.ethereum.org).
 
-### Hello World {#hello-world}
+### Hello world {#hello-world}
 
 ```solidity
 // Specifies the version of Solidity, using semantic versioning.
@@ -246,7 +246,7 @@ contract HelloWorld {
 }
 ```
 
-### トークン {#token}
+### Token {#token}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -309,7 +309,7 @@ contract Token {
 }
 ```
 
-### 固有のデジタル資産 {#unique-digital-asset}
+### Unieke digitale activa {#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -626,10 +626,10 @@ contract CryptoPizza is IERC721, ERC165 {
         uint256 size;
         // Currently there is no better way to check if there is a contract in an address
         // than to check the size of the code at that address.
-        // どのように動くかの詳細は、
-        // https://ethereum.stackexchange.com/a/14016/36603 を確認する。
-        // TODO すべてのアドレスが縮小されるので、
-        // セレニティリリースの前に、ここをもう一度確認する。
+        // See https://ethereum.stackexchange.com/a/14016/36603
+        // for more details about how this works.
+        // TODO Check this again before the Serenity release, because all addresses will be
+        // contracts then.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)
@@ -639,20 +639,20 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## 参考文献 {#further-reading}
+## Verder lezen {#further-reading}
 
-スマートコントラクトの全体的な概要については、SolidityとVyperのドキュメントをご確認ください。
+Bekijk de documentatie van Solidity en Vyper voor een meer compleet overzicht van smart contracts:
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
-## 関連トピック {#related-topics}
+## Gerelateerde onderwerpen {#related-topics}
 
-- [スマートコントラクト](/developers/docs/smart-contracts/)
-- [イーサリアム仮想マシン(EVM)](/developers/docs/evm/)
+- [Smart Contracts](/developers/docs/smart-contracts/)
+- [Ethereum Virtual Machine](/developers/docs/evm/)
 
-## 関連チュートリアル {#related-tutorials}
+## Gerelateerde tutorials {#related-tutorials}
 
-- [コントラクトのサイズ制限に対処するためのコントラクトのサイズ縮小](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- スマートコントラクトのサイズを小さくするための実用的なヒント_
-- [イベントを使用してスマートコントラクトからデータをログに記録](/developers/tutorials/logging-events-smart-contracts/) _- スマートコントラクトのイベントの紹介と、それを使ってデータをログに記録する方法_
-- [Solidityを使用した他のコントラクトとの連携](/developers/tutorials/interact-with-other-contracts-from-solidity/) _- 既存のコントラクトからスマートコントラクトをデプロイし、それを扱う方法_
+- [De omvang van contracten verkleinen om de limiet van de contractgrootte te bestrijden](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- Enkele praktische tips om de omvang van uw smart contract te verkleinen._
+- [Gegevens loggen van smart contracts met evenementen](/developers/tutorials/logging-events-smart-contracts/) _- Een inleiding tot evenementen in smart contracts en hoe u ze kunt gebruiken om gegevens te loggen._
+- [Interactie met andere contracten van Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _- Hoe een smart contract van een bestaand contract inzetten en er interactie mee hebben._
