@@ -1,25 +1,25 @@
 ---
-title: Anatomia dos contratos inteligentes
-description: Uma análise aprofundada na anatomia de um contrato inteligente - funções, dados e variáveis.
-lang: pt-br
+title: Di strukshure of smart kontracts
+description: Deep-deep look into di strukshure of one smart kontract - di funshon, data, and variabols.
+lang: pcm
 ---
 
-Um contrato inteligente (smart contract) é um programa executado em um endereço na Ethereum. Eles são compostos por dados e funções que podem ser executadas ao receber uma transação. Veja aqui uma visão geral do que compõe um contrato inteligente.
+One smart kontract na program wey dey run for one address on Ethereum. Dem make dem wit data and funshons wey fit exekute as dem dey risiv one transakshon. Hia na ovaview of wetin dey make up one smart kontract.
 
-## Pré-requisitos {#prerequisites}
+## Prerequisites {#prerequisites}
 
-Não deixe de ler sobre [contratos inteligentes](/developers/docs/smart-contracts/). Este documento presume que você já está familiarizado com linguagens de programação como JavaScript ou Python.
+Make sure sey yu don read about [smart kontracts](/developers/docs/smart-contracts/) bifor. Dis dokument assume sey yu don already sabi di programming languajis such as JavaScript abi Python.
 
-## Dados {#data}
+## Data {#data}
 
-Quaisquer dados de contrato devem ser atribuídos a um local: seja para `armazenamento` ou `memória`. É caro modificar o armazenamento em um contrato inteligente, então você precisa considerar onde seus dados devem estar no ar.
+Any kontract data suppose getone lokashon: e fit bi `storaj` abi `memory`. E dey kost money well-well to shanj storaj for smart kontract so yu nid to konsida wia yor data supose dey.
 
-### Armazenamento {#storage}
+### Storaj {#storage}
 
-Dados persistentes são referidos como armazenamento e são representados por variáveis de estado. Esses valores são armazenados permanentemente na blockchain. É necessário declarar o tipo para que o contrato possa manter um registro de quanto espaço na blockchain será necessário quando ele compilar.
+Data wey go dey foreva na im dem dey koll storaj and na state variabols dey rep am. Dem stor dis values on di blockchain foreva. Yu nid tell dem di type so dat di kontract go fit sabi hau much storaj im nid on top blockchain wen im dey kompile.
 
 ```solidity
-// Exemplo Solidity
+// Solidity example
 contract SimpleStorage {
     uint storedData; // State variable
     // ...
@@ -27,86 +27,86 @@ contract SimpleStorage {
 ```
 
 ```python
-# Exemplo Vyper
+# Vyper example
 storedData: int128
 ```
 
-Se você já programou linguagens orientadas a objetos, provavelmente você estará familiarizado com a maioria dos tipos. Entretanto, `address` (endereço) deve ser novo para você se você for novo no desenvolvimento com Ethereum.
+If u don already program languajis wey dey for object, yu go sabi plenti types of dem. But `address` suppose dey new to yu if yu dey new to Ethereum divelopment.
 
-Um tipo `address` pode conter um endereço Ethereum que equivale a 20 bytes ou 160 bits. Ele retorna em hexadecimal com um 0 à frente.
+One `address` type fit hold one Ethereum address wey dey di same to 20 bytes abi 160 bits. Im dey riturn in hexadecimal notashon wit one 0x wey dey lead.
 
-Outros tipos incluem:
+Oda types inklude:
 
-- booleano
-- inteiro
-- números de ponto fixo
-- arrays de bytes de tamanho fixo
-- arrays de bytes de tamanho dinâmico
-- Literais racionais e inteiros
-- Literais de strings
-- Literais hexadecimais
-- Enumeradores
+- boolean
+- integer
+- fixed point numbas
+- fixed-size byte arrays
+- dynamically-sized byte arrays
+- Rashonal and integer literals
+- String literals
+- Hexadecimal literals
+- Enums
 
-Para mais explicação, dê uma olhada na documentação:
+If yu wont more ekplanashon, make yu look di dokuments:
 
-- [Veja tipos de Vyper](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
-- [Veja tipos de Solidity](https://solidity.readthedocs.io/en/latest/types.html#value-types)
+- [Make yu see vyper types](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
+- [Make yu see Solidity types](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
-### Memória {#memory}
+### Memory {#memory}
 
-Valores que são armazenados apenas para a duração da execução da função de contratos são chamadas de variáveis de memória. Como estes não são armazenados permanentemente na blockchain, são muito mais baratos de usar.
+Values wey dem kip only for laiftaim wey kontract funshon exekushon dey koll memory variabols. Sinse dem nor store dem on blockchain kpatakpata, dem dey sheap wella to yus.
 
-Saiba mais sobre como a EVM armazena dados (Storage, Memória e Stack) em [Solidity docs](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
+Make yu learn more about hau di EVM dey store data (Storaj, Memory, and di Stack) in di [Solidity dokuments](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
-### Variáveis de ambiente {#environment-variables}
+### Environment variabols {#environment-variables}
 
-Além das variáveis definidas no seu contrato, existem algumas variáveis globais especiais. Elas são usadas principalmente para fornecer informações sobre a blockchain (cadeia de blocos) ou transação atual.
+In adishon to di variabols wey yu difine for yor kontract, some speshial global variabols dey. Dem dey first yus dem to provide info about di blockchain abi kurent transakshon.
 
-Exemplos:
+Eksampols:
 
-| **Prop**          | **Variável de estado** | **Descrição**                         |
-| ----------------- | ---------------------- | ------------------------------------- |
-| `block.timestamp` | uint256                | Data/hora de início do bloco atual    |
-| `msg.sender`      | endereço               | Remetente da mensagem (chamada atual) |
+| **Prop**          | **State variabol** | **Deskripshon**                  |
+| ----------------- | ------------------ | -------------------------------- |
+| `block.timestamp` | uint256            | Blok epoch taimstamp wey dey nau |
+| `msg.sender`      | address            | Senda of di messaj (kurent koll) |
 
-## Funções {#functions}
+## Funshons {#functions}
 
-Da forma mais simplista, funções podem obter informação ou um conjunto de informações em resposta a entrada de transações.
+To tok am for simpol tams, funshons fit get informashon abi set of informashon as inkomin transakshons dey respond.
 
-Existem dois tipos de chamadas de função:
+Twi types of funshon kolls dey:
 
-- `internal` - estas não criam uma chamada EVM
-  - Funções internas e variáveis de estado só podem ser acessadas internamente (ou seja, de dentro do contrato atual ou de contratos derivados do mesmo)
-- `external` - estas criam uma chamada EVM
-  - Funções externas fazem parte da interface do contrato, o que significa que elas podem ser chamadas a partir de outros contratos e através de transações. Uma função externa `f` não pode ser chamada internamente (ou seja, `f()` não funciona, mas `this.f()` funciona).
+- `internal` – dis ones nor dey kreate EVM koll
+  - Internal funshons and state variabols fit only hapun internaly (i.e. from inside di kurent kontract abi kontracts wey dey take from am)
+- `external` – dis ones dey kreate EVM koll
+  - Ekstanal funshons nor dey part of di kontract interface, wey mean sey dem fit koll dem from oda kontracts and thru transakshons. Dem nor fit koll ekstanal funshon for inside `f` (i.e. `f()` nor dey work, but `dis one.f()` dey work).
 
-Também podem ser `públicas` ou `privadas`
+Dem fit also bi `publik` abi `private`
 
-- `funções públicas` podem ser chamadas internamente a partir de dentro do contrato ou externamente por meio de mensagens
-- `funções privadas` são visíveis apenas para o contrato no qual elas estão definidas e não nos contratos derivados
+- `publik` funshons fit bi anybodi from inside di kontract abi for outside thru messajis
+- `private` funshons dey only show for di kontract wey dem yus difine dem and nor bi inside kontracts wey dem derive
 
-Tanto funções quanto variáveis de estado podem ser tornadas públicas ou privadas
+Both funshons and state variabols fit bi publik abi private
 
-Aqui está uma função para atualizar uma variável de estado em um contrato:
+Hia na funshon wey dey update one state variabol on one kontract:
 
 ```solidity
-// Exemplo de Solidity
+// Solidity example
 function update_name(string value) public {
     dapp_name = value;
 }
 ```
 
-- O parâmetro `valor` do tipo `string` é passado para a função: `update_name`
-- É declarado `público`, o que significa que qualquer um pode acessá-lo
-- Não é declarada a `visão`, então ela pode modificar o estado do contrato
+- Di parameter `value` of type `string` dey passed into di funshon: `update_name`
+- Dem go make am dey `publik`, wey mean sey anybodi fit yus am
+- Dem nor koll am `view`, so dem fit adjust di kontract state
 
-### Ver funções {#view-functions}
+### View funshons {#view-functions}
 
-Essas funções prometem não modificar o estado dos dados do contrato. Exemplos comuns são funções "obter" – você pode usar isso para receber o saldo de um usuário, por exemplo.
+Dis kain funshons dey promise sey dem nor go shanj di data wey dey di kontract. Eksampol wey kommon na "getter" funshons – yu fit yus dis risiv one user balans for eksampol.
 
 ```solidity
-// Exemplo
-function balanceOf(address _owner) public view return (uint256 _balance) {
+// Solidity example
+function balanceOf(address _owner) public view returns (uint256 _balance) {
     return ownerPizzaCount[_owner];
 }
 ```
@@ -120,61 +120,61 @@ def readName() -> string:
   return dappName
 ```
 
-O que é considerado como modificar estado:
+Wetin dem dey konsida state tu dey yus modify:
 
-1. Escrevendo variáveis de estado.
-2. [Emitir eventos](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events).
-3. [Criação de outros contratos](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts).
-4. Usando `autodestruct`.
-5. Enviando ether por chamadas.
-6. Chamar qualquer função não marcada como`view`ou`puro`.
-7. Usando chamadas de baixo nível.
-8. Usando montagem em linha que contém certos códigos.
+1. To dey write to state variabols.
+2. [To dey emit events](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events).
+3. [To dey kreate oda kontracts](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts).
+4. To dey yus `selfdestruct`.
+5. To dey send ether thru kolls.
+6. To dey koll any funshon wey dem nor mark`view`abi`pure`.
+7. To dey yus low-level kolls.
+8. To dey yus inline assembly wey get satain opcodes.
 
-### Funções de "construtor" {#constructor-functions}
+### Konstructor funshons {#constructor-functions}
 
-`construtor` funções são executadas apenas uma vez quando o contrato é implantado pela primeira vez. Como o `construtor` em muitas linguagens de programação baseadas em classe, essas funções geralmente inicializam variáveis de estado para seus valores especificados.
+Dem dey run `konstructor` funshons only one taim wendem first riliz di kontract. Laik `konstructor` for many programming languajis wey dey yus klass, dis funshons dey start set state variabols to di values wey dem want.
 
 ```solidity
-// Exemplo Solidity
-// Inicializa os dados do contrato, definindo o `owner`
-// como endereço do criador do contrato.
+// Solidity example
+// Initializes the contract's data, setting the `owner`
+// to the address of the contract creator.
 constructor() public {
-    // Todos os contratos inteligentes dependem de transações externas para acionar suas funções.
-    // `msg` é uma variável global que inclui dados relevantes sobre a transação em questão,
-    // como o endereço do remetente e o valor ETH incluído na transação.
-    // Saiba mais: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+    // All smart contracts rely on external transactions to trigger its functions.
+    // `msg` is a global variable that includes relevant data on the given transaction,
+    // such as the address of the sender and the ETH value included in the transaction.
+    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
     owner = msg.sender;
 }
 ```
 
 ```python
-# Exemplo Vyper
+# Vyper example
 
 @external
-def __init__(_beneficiary: endereço, _bidding_time: uint256):
-    mesmo. eneficiário = _beneficiário
+def __init__(_beneficiary: address, _bidding_time: uint256):
+    self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### Funções integradas {#built-in-functions}
+### Funkshons wey dem build-in {#built-in-functions}
 
-Além das variáveis definidas no seu contrato, existem algumas variáveis globais especiais. O exemplo mais óbvio é:
+In adishon to di variabols and funshons wey yu difine on yor kontract, some speshial built-in funshons dey. Di eksamol wey efrione sabi na:
 
 - `address.send()` – Solidity
-- `Enviar(endereço)` – Vyper
+- `send(address)` – Vyper
 
-Estes permitem contratos para enviar ETH para outras contas.
+Dis dey allow kontracts to send ETH to oda akants.
 
-## Como escrever funções {#writing-functions}
+## To dey write funshons {#writing-functions}
 
-Sua função precisa:
+Yor funshon nid:
 
-- variável e tipo de parâmetro (se aceitar parâmetros)
-- declaração de interno/externo
-- declaração de puro/visualização/pagável
-- tipo de retorno (se ele retornar um valor)
+- Parameter variabol and type (if im dey asept parameters)
+- diklarashon of internal/eksternal
+- diklarashon of pure/view/payabol
+- riturns type (if im dey riturn one value)
 
 ```solidity
 pragma solidity >=0.4.0 <=0.6.0;
@@ -199,47 +199,47 @@ contract ExampleDapp {
 }
 ```
 
-Um contrato completo pode parecer algo assim. Aqui a função `construtor` fornece um valor inicial para a variável `dapp_name`.
+One komplete kontract fit look laik dis. For hia di `konstructor` funshon go first provide on value for di `dapp_name` variabol.
 
-## Eventos e registros {#events-and-logs}
+## Events and logs {#events-and-logs}
 
-Os eventos permitem que seu contrato inteligente se comunique com seu front-end ou outros aplicativos que se inscrevem para recebê-los. Uma vez que uma transação é validada e adicionada a um bloco, os contratos inteligentes podem emitir eventos e registrar informações, que o front-end pode processar e utilizar.
+Events dey enabol yor smart kontract to dey tok wit yor frontend abi oda aplikashons wey dey subskribe. Wons dem don validate one transakshon kon add am to one block, smart kontracts fit emit events and log informashon, wey di frontend fit dey process and dey yus.
 
-## Exemplos anotados {#annotated-examples}
+## Eksampol wey dem annotate {#annotated-examples}
 
-Estes são alguns exemplos escritos em Solidity. Se você quiser brincar com o código, pode interagir com eles no [Remix](http://remix.ethereum.org).
+Dis na some eksampols wey dem write for Solidity. If yu go laik play wit di code, yu fit interact wit dem for [Remix](http://remix.ethereum.org).
 
-### Hello World {#hello-world}
+### Hello world {#hello-world}
 
 ```solidity
-// Especifica a versão do Solidity usando a versão semântica.
-// Saiba mais: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+// Specifies the version of Solidity, using semantic versioning.
+// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.5.10;
 
-// Define um contrato chamado `HelloWorld`.
-// Um contrato é uma coleção de funções e dados (seu estado).
-// Uma vez implantado, um contrato reside em um endereço específico na blockchain Ethereum.
-// Saiba mais: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Defines a contract named `HelloWorld`.
+// A contract is a collection of functions and data (its state).
+// Once deployed, a contract resides at a specific address on the Ethereum blockchain.
+// Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
-    // Declita uma variável `message` de tipo `string`.
-    // Variáveis de estado são variáveis cujos valores são permanentemente armazenados no armazenamento do contrato.
-    // A palavra-chave 'público' torna variáveis acessíveis fora de um contrato
-    // e cria uma função que outros contratos ou clientes podem chamar para acessar o valor.
-    mensagem pública de cadeia;
+    // Declares a state variable `message` of type `string`.
+    // State variables are variables whose values are permanently stored in contract storage.
+    // The keyword `public` makes variables accessible from outside a contract
+    // and creates a function that other contracts or clients can call to access the value.
+    string public message;
 
-    // Semelhante a muitas linguagens de objeto, baseadas em classes, um construtor é
-    // uma função especial que é executada somente após a criação do contrato.
-    // Os construtores são usados para inicializar os dados do contrato.
-    // Saiba mais: https://solidity.readthedocs.io/en/v0.5.10/contracts. tml#constructors
+    // Similar to many class-based object-oriented languages, a constructor is
+    // a special function that is only executed upon contract creation.
+    // Constructors are used to initialize the contract's data.
+    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
     constructor(string memory initMessage) public {
-        // Aceita um argumento de string `initMessage` e define o valor
-        // na variável de armazenamento `message` do contrato).
+        // Accepts a string argument `initMessage` and sets the value
+        // into the contract's `message` storage variable).
         message = initMessage;
     }
 
-    // Uma função pública que aceita um argumento de string
-    // e atualiza a variável de armazenamento `message`.
+    // A public function that accepts a string argument
+    // and updates the `message` storage variable.
     function update(string memory newMessage) public {
         message = newMessage;
     }
@@ -252,85 +252,87 @@ contract HelloWorld {
 pragma solidity ^0.5.10;
 
 contract Token {
-    // Um "endereço" é comparável a um endereço de e-mail - é usado para comparar uma conta no Ethereum.
-    // Endereços podem representar uma conta de contrato inteligente ou uma conta externa (usuário).
-    // Saiba mais: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
+    // An `address` is comparable to an email address - it's used to identify an account on Ethereum.
+    // Addresses can represent a smart contract or an external (user) accounts.
+    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
     address public owner;
 
-    // Um `mapping` é essencialmente uma estrutura de dados de tabela de hash.
-    // Este `mapeamento` atribui um inteiro não assinado (o saldo do token) a um endereço (o titular do token).
-    // Saiba mais: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
+    // A `mapping` is essentially a hash table data structure.
+    // This `mapping` assigns an unsigned integer (the token balance) to an address (the token holder).
+    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#mapping-types
     mapping (address => uint) public balances;
 
-    // Eventos permitem registro de atividade no blockchain.
-    // Clientes Ethereum podem ouvir eventos para reagir às alterações do estado do contrato.
+    // Events allow for logging of activity on the blockchain.
+    // Ethereum clients can listen for events in order to react to contract state changes.
     // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
     event Transfer(address from, address to, uint amount);
 
     // Initializes the contract's data, setting the `owner`
     // to the address of the contract creator.
     constructor() public {
-    // Todos os contratos inteligentes dependem de transações externas para acionar suas funções.
-        // `msg` é uma variável global que inclui dados relevantes sobre a transação em questão,
-    // como o endereço do remetente e o valor ETH incluído na transação.
-        // Saiba mais: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+        // All smart contracts rely on external transactions to trigger its functions.
+        // `msg` is a global variable that includes relevant data on the given transaction,
+        // such as the address of the sender and the ETH value included in the transaction.
+        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
         owner = msg.sender;
     }
 
-    // Cria uma quantidade de novos tokens e os envia para um endereço.
+    // Creates an amount of new tokens and sends them to an address.
     function mint(address receiver, uint amount) public {
-        // `require` é uma estrutura de controle usada para aplicar certas condições.
-        // Se um comando `require` for avaliado como `false`, uma exceção é acionada,
-        // que reverte todas as alterações feitas ao estado durante a chamada atual.
-        // Saiba mais: https://solidity.readthedocs.io/en/v0.5.10/control-structures. tml#error-handling-assert-require-revert-and-exceptions
+        // `require` is a control structure used to enforce certain conditions.
+        // If a `require` statement evaluates to `false`, an exception is triggered,
+        // which reverts all changes made to the state during the current call.
+        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // Somente o proprietário do contrato pode chamar esta função
-        require(msg. remetente == dono, "Você não é o dono. );
+        // Only the contract owner can call this function
+        require(msg.sender == owner, "You are not the owner.");
 
-        // Reforça uma quantidade máxima de tokens
-        require(amount < 1e60, "Emissão máxima excedida");
+        // Enforces a maximum amount of tokens
+        require(amount < 1e60, "Maximum issuance exceeded");
 
-        // Aumenta o saldo de `receiver` em `amount`
-        saldos[receiver] += amount;
+        // Increases the balance of `receiver` by `amount`
+        balances[receiver] += amount;
     }
 
-    // Envia uma quantidade de tokens existentes de qualquer chamada para um endereço.
+    // Sends an amount of existing tokens from any caller to an address.
     function transfer(address receiver, uint amount) public {
-        // O remetente deve ter tokens suficientes para enviar
+        // The sender must have enough tokens to send
         require(amount <= balances[msg.sender], "Insufficient balance.");
 
-        // Ajusta os saldos do token dos dois endereços
-        balances[msg.sender] -= quantidade;
-        balances[receiver] += quantidade;
+        // Adjusts token balances of the two addresses
+        balances[msg.sender] -= amount;
+        balances[receiver] += amount;
 
-        // Emite um evendo definido anteriormente
-        emite Transfer(msg.sender, receiver, amount);
+        // Emits the event defined earlier
+        emit Transfer(msg.sender, receiver, amount);
     }
 }
 ```
 
-### Ativo digital único {#unique-digital-asset}
+### Dijital asset wey unik {#unique-digital-asset}
 
 ```solidity
-pragma solidity ^0.5.10.
-// Neste caso, uma série de contratos auxiliares de OpenZeppelin.
-// Saiba mais: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
+pragma solidity ^0.5.10;
+
+// Imports symbols from other files into the current contract.
+// In this case, a series of helper contracts from OpenZeppelin.
+// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
-import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver. ol";
+import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
 import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
-// A palavra-chave `is` é usada para herdar funções e palavras-chave de contratos externos.
-// Neste caso, o `CryptoPizza` herda dos contratos `IERC721` e `ERC165`.
-// Saiba mais: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
+// The `is` keyword is used to inherit functions and keywords from external contracts.
+// In this case, `CryptoPizza` inherits from the `IERC721` and `ERC165` contracts.
+// Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
-    // Usa a biblioteca OpenZeppelin para executar operações aritméticas de forma segura.
-    // Saiba mais: https://docs.openzeppelin.com/contracts/2. /api/math#SafeMath
-    usando SafeMath para uint256;
+    // Uses OpenZeppelin's SafeMath library to perform arithmetic operations safely.
+    // Learn more: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    using SafeMath for uint256;
 
-    // Variáveis de estado constantes em Solidity são semelhantes a outros idiomas
-    // mas você deve atribuir a partir de uma expressão que é constante na hora de compilação.
+    // Constant state variables in Solidity are similar to other languages
+    // but you must assign from an expression which is constant at compile time.
     // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
@@ -637,20 +639,20 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## Leitura adicional {#further-reading}
+## Further reading {#further-reading}
 
-Confira a documentação sobre Solidity e Vyper para ter uma visão geral mais completa dos contratos inteligentes:
+Make yu shek out Solidity and Vyper dokumentashon for more komplete ovaview of smart kontracts:
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
-## Tópicos relacionados {#related-topics}
+## Related topics {#related-topics}
 
-- [Smart Contracts](/developers/docs/smart-contracts/)
-- [Máquina Virtual Ethereum](/developers/docs/evm/)
+- [Smart contracts](/developers/docs/smart-contracts/)
+- [Di Ethereum Virtual Machine](/developers/docs/evm/)
 
-## Tutoriais relacionados {#related-tutorials}
+## Related tutorials {#related-tutorials}
 
-- [Diminuir contratos para enfrentar o limite de tamanho do contrato](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Algumas dicas práticas para reduzir o tamanho de seu contrato inteligente._
-- [Registrando dados de contratos inteligentes com eventos](/developers/tutorials/logging-events-smart-contracts/) _– Uma introdução aos eventos de contratos inteligentes e como você pode usá-los para registrar dados._
-- [Interaja com outros contratos Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Como implantar um contrato inteligente a partir de um contrato existente e interagir com ele._
+- [To dey downsize kontracts to fite di kontract size limit](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _-- Some pratika tips to dey ridus di size of yor smart kontract._
+- [To dey login data from di smart kontracts wit events](/developers/tutorials/logging-events-smart-contracts/)_ -- One introdukshon to smart kontract events and hau yu fit yus dem to log data._
+- [Interact wit oda kontracts from Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Hau to dey show one smart kontract from kontract wey dey exist and interact wit am._
