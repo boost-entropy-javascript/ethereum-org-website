@@ -10181,7 +10181,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/84749041?v=4",
       "profile": "http://uniyj.eth",
       "contributions": [
-        "content"
+        "content",
+        "maintenance"
       ]
     },
     {
@@ -12816,6 +12817,24 @@
       "name": "otc group",
       "avatar_url": "https://avatars.githubusercontent.com/u/214395681?v=4",
       "profile": "https://github.com/otc-png",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Savio-Sou",
+      "name": "Savio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72797635?v=4",
+      "profile": "https://github.com/Savio-Sou",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "vtjl10",
+      "name": "fuder.eth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139509124?v=4",
+      "profile": "https://github.com/vtjl10",
       "contributions": [
         "maintenance"
       ]
