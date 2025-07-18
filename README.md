@@ -2008,6 +2008,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://rohitt.in"><img src="https://avatars.githubusercontent.com/u/81370462?v=4?s=100" width="100px;" alt="Rohit Gupta"/><br /><sub><b>Rohit Gupta</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rohitt-gupta" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/rvmz"><img src="https://avatars.githubusercontent.com/u/92804957?v=4?s=100" width="100px;" alt="Roman Mazurenko"/><br /><sub><b>Roman Mazurenko</b></sub></a><br /><a href="#maintenance-rvmz" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/standstaff"><img src="https://avatars.githubusercontent.com/u/163401255?v=4?s=100" width="100px;" alt="ZhengXingRu"/><br /><sub><b>ZhengXingRu</b></sub></a><br /><a href="#maintenance-standstaff" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/imbarty"><img src="https://avatars.githubusercontent.com/u/191963641?v=4?s=100" width="100px;" alt="barty"/><br /><sub><b>barty</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aimbarty" title="Bug reports">🐛</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/futreall"><img src="https://avatars.githubusercontent.com/u/86553580?v=4?s=100" width="100px;" alt="futreall"/><br /><sub><b>futreall</b></sub></a><br /><a href="#translation-futreall" title="Translation">🌍</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Afutreall" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xshikhar"><img src="https://avatars.githubusercontent.com/u/64684053?v=4?s=100" width="100px;" alt="Shikhar Singh"/><br /><sub><b>Shikhar Singh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=0xshikhar" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
