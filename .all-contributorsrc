@@ -12929,6 +12929,24 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "clacladev",
+      "name": "clacla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/161903?v=4",
+      "profile": "https://github.com/clacladev",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "baumstern",
+      "name": "Daehyun Paik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1610146?v=4",
+      "profile": "https://a30a.dev/",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
