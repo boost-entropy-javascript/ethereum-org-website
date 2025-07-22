@@ -12958,6 +12958,15 @@
       ]
     },
     {
+      "login": "YashIIT0909",
+      "name": "Yash Agarwal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/182656811?v=4",
+      "profile": "https://github.com/YashIIT0909",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
       "login": "tomrpl",
       "name": "Reppelin Tom",
       "avatar_url": "https://avatars.githubusercontent.com/u/75627352?v=4",
@@ -12973,6 +12982,24 @@
       "profile": "https://mdqst.com",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "3eph1r0th",
+      "name": "Sephiroth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26237289?v=4",
+      "profile": "https://github.com/3eph1r0th",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "IlyaSmiyukha",
+      "name": "Ilya Smiyukha",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39830587?v=4",
+      "profile": "https://ilyasmiyukha.github.io/",
+      "contributions": [
+        "maintenance"
       ]
     }
   ],
