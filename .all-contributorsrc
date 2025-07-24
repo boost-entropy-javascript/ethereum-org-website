@@ -12927,7 +12927,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/64684053?v=4",
       "profile": "https://github.com/0xshikhar",
       "contributions": [
-        "code"
+        "code",
+        "content"
       ]
     },
     {
@@ -13009,6 +13010,42 @@
       "profile": "https://github.com/jorgesumle",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "CryptoDelirium",
+      "name": "Crypto Delirium",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6353394?v=4",
+      "profile": "https://github.com/CryptoDelirium",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "alinobrasil",
+      "name": "AK",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1214559?v=4",
+      "profile": "https://github.com/alinobrasil",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "0xumarkhatab",
+      "name": "0xumarkhatab",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71306738?v=4",
+      "profile": "https://github.com/0xumarkhatab",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "alcueca",
+      "name": "Alberto Cuesta Cañada",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38806121?v=4",
+      "profile": "https://www.linkedin.com/in/albertocuesta/",
+      "contributions": [
+        "maintenance"
       ]
     }
   ],
