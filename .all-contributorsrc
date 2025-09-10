@@ -13207,6 +13207,24 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "EnesKeremAYDIN",
+      "name": "Enes Kerem AYDIN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46195766?v=4",
+      "profile": "https://eneskeremaydin.com.tr",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "hexcow",
+      "name": "hexcow",
+      "avatar_url": "https://avatars.githubusercontent.com/u/200669683?v=4",
+      "profile": "https://github.com/hexcow",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
