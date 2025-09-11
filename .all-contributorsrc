@@ -6146,7 +6146,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/4249432?v=4",
       "profile": "https://github.com/LingTian",
       "contributions": [
-        "content"
+        "content",
+        "eventOrganizing"
       ]
     },
     {
@@ -13245,6 +13246,16 @@
       "profile": "http://trocher.ch",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "ryangoree",
+      "name": "Ryan Goree",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3289505?v=4",
+      "profile": "http://gists.github.com/ryangoree",
+      "contributions": [
+        "maintenance",
+        "code"
       ]
     }
   ],

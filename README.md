@@ -1063,7 +1063,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Gobljn"><img src="https://avatars.githubusercontent.com/u/44135563?v=4?s=100" width="100px;" alt="Nicola Bonsi"/><br /><sub><b>Nicola Bonsi</b></sub></a><br /><a href="#ideas-Gobljn" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/yelnady/"><img src="https://avatars.githubusercontent.com/u/45317481?v=4?s=100" width="100px;" alt="Yusuf Elnady"/><br /><sub><b>Yusuf Elnady</b></sub></a><br /><a href="#content-yelnady" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/aryankeluskar"><img src="https://avatars.githubusercontent.com/u/80093392?v=4?s=100" width="100px;" alt="Aryan Keluskar"/><br /><sub><b>Aryan Keluskar</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=aryankeluskar" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/LingTian"><img src="https://avatars.githubusercontent.com/u/4249432?v=4?s=100" width="100px;" alt="Ling"/><br /><sub><b>Ling</b></sub></a><br /><a href="#content-LingTian" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/LingTian"><img src="https://avatars.githubusercontent.com/u/4249432?v=4?s=100" width="100px;" alt="Ling"/><br /><sub><b>Ling</b></sub></a><br /><a href="#content-LingTian" title="Content">🖋</a> <a href="#eventOrganizing-LingTian" title="Event Organizing">📋</a></td>
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://5oren.com"><img src="https://avatars.githubusercontent.com/u/49735495?v=4?s=100" width="100px;" alt="Søren Rood"/><br /><sub><b>Søren Rood</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=sorenrood" title="Code">💻</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=sorenrood" title="Documentation">📖</a> <a href="#ideas-sorenrood" title="Ideas, Planning, & Feedback">🤔</a></td>
@@ -2057,6 +2057,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://trocher.ch"><img src="https://avatars.githubusercontent.com/u/43437004?v=4?s=100" width="100px;" alt="trocher"/><br /><sub><b>trocher</b></sub></a><br /><a href="#content-trocher" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://gists.github.com/ryangoree"><img src="https://avatars.githubusercontent.com/u/3289505?v=4?s=100" width="100px;" alt="Ryan Goree"/><br /><sub><b>Ryan Goree</b></sub></a><br /><a href="#maintenance-ryangoree" title="Maintenance">🚧</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=ryangoree" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
