@@ -1678,7 +1678,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/bilaljawed"><img src="https://avatars.githubusercontent.com/u/17548944?v=4?s=100" width="100px;" alt="Bilal"/><br /><sub><b>Bilal</b></sub></a><br /><a href="#content-bilaljawed" title="Content">🖋</a></td>
     </tr>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://ilanolkies.com"><img src="https://avatars.githubusercontent.com/u/36084092?v=4?s=100" width="100px;" alt="Ilan"/><br /><sub><b>Ilan</b></sub></a><br /><a href="#content-ilanolkies" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://ilanolkies.com"><img src="https://avatars.githubusercontent.com/u/36084092?v=4?s=100" width="100px;" alt="Ilan"/><br /><sub><b>Ilan</b></sub></a><br /><a href="#content-ilanolkies" title="Content">🖋</a> <a href="#maintenance-ilanolkies" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://mirror.xyz/umede.eth"><img src="https://avatars.githubusercontent.com/u/122288558?v=4?s=100" width="100px;" alt="umede"/><br /><sub><b>umede</b></sub></a><br /><a href="#content-umededoteth" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://taminobaumann.com"><img src="https://avatars.githubusercontent.com/u/48290617?v=4?s=100" width="100px;" alt="Tamino"/><br /><sub><b>Tamino</b></sub></a><br /><a href="#content-taminobaumann" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/keccers"><img src="https://avatars.githubusercontent.com/u/770277?v=4?s=100" width="100px;" alt="Katherine Champagne"/><br /><sub><b>Katherine Champagne</b></sub></a><br /><a href="#content-keccers" title="Content">🖋</a></td>
@@ -2021,7 +2021,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://www.linkedin.com/in/tom-reppelin"><img src="https://avatars.githubusercontent.com/u/75627352?v=4?s=100" width="100px;" alt="Reppelin Tom"/><br /><sub><b>Reppelin Tom</b></sub></a><br /><a href="#tool-tomrpl" title="Tools">🔧</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://mdqst.com"><img src="https://avatars.githubusercontent.com/u/98899785?v=4?s=100" width="100px;" alt="Dmitry"/><br /><sub><b>Dmitry</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amdqst" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://mdqst.com"><img src="https://avatars.githubusercontent.com/u/98899785?v=4?s=100" width="100px;" alt="Dmitry"/><br /><sub><b>Dmitry</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amdqst" title="Bug reports">🐛</a> <a href="#maintenance-mdqst" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/3eph1r0th"><img src="https://avatars.githubusercontent.com/u/26237289?v=4?s=100" width="100px;" alt="Sephiroth"/><br /><sub><b>Sephiroth</b></sub></a><br /><a href="#tool-3eph1r0th" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://ilyasmiyukha.github.io/"><img src="https://avatars.githubusercontent.com/u/39830587?v=4?s=100" width="100px;" alt="Ilya Smiyukha"/><br /><sub><b>Ilya Smiyukha</b></sub></a><br /><a href="#maintenance-IlyaSmiyukha" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jorgesumle"><img src="https://avatars.githubusercontent.com/u/14212780?v=4?s=100" width="100px;" alt="Jorge"/><br /><sub><b>Jorge</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajorgesumle" title="Bug reports">🐛</a></td>
@@ -2053,6 +2053,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/David7877"><img src="https://avatars.githubusercontent.com/u/203911861?v=4?s=100" width="100px;" alt="David7877"/><br /><sub><b>David7877</b></sub></a><br /><a href="#tool-David7877" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://eneskeremaydin.com.tr"><img src="https://avatars.githubusercontent.com/u/46195766?v=4?s=100" width="100px;" alt="Enes Kerem AYDIN"/><br /><sub><b>Enes Kerem AYDIN</b></sub></a><br /><a href="#maintenance-EnesKeremAYDIN" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hexcow"><img src="https://avatars.githubusercontent.com/u/200669683?v=4?s=100" width="100px;" alt="hexcow"/><br /><sub><b>hexcow</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahexcow" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/dlr-a"><img src="https://avatars.githubusercontent.com/u/116620647?v=4?s=100" width="100px;" alt="dlr-a"/><br /><sub><b>dlr-a</b></sub></a><br /><a href="#content-dlr-a" title="Content">🖋</a> <a href="#maintenance-dlr-a" title="Maintenance">🚧</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://trocher.ch"><img src="https://avatars.githubusercontent.com/u/43437004?v=4?s=100" width="100px;" alt="trocher"/><br /><sub><b>trocher</b></sub></a><br /><a href="#content-trocher" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
