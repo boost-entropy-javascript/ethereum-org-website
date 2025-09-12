@@ -13028,7 +13028,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/14212780?v=4",
       "profile": "https://github.com/jorgesumle",
       "contributions": [
-        "bug"
+        "bug",
+        "maintenance"
       ]
     },
     {
@@ -13249,6 +13250,15 @@
       ]
     },
     {
+      "login": "Daulox92",
+      "name": "CrazyFrog",
+      "avatar_url": "https://avatars.githubusercontent.com/u/188603830?v=4",
+      "profile": "https://github.com/Daulox92",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
       "login": "ryangoree",
       "name": "Ryan Goree",
       "avatar_url": "https://avatars.githubusercontent.com/u/3289505?v=4",
@@ -13256,6 +13266,33 @@
       "contributions": [
         "maintenance",
         "code"
+      ]
+    },
+    {
+      "login": "yansq",
+      "name": "Siqi Yan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26108404?v=4",
+      "profile": "https://github.com/yansq",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "famouswizard",
+      "name": "wizard",
+      "avatar_url": "https://avatars.githubusercontent.com/u/112275929?v=4",
+      "profile": "https://github.com/famouswizard",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "barajeel",
+      "name": "Barajeel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/185210158?v=4",
+      "profile": "https://zksec.io",
+      "contributions": [
+        "maintenance"
       ]
     }
   ],
