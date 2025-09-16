@@ -479,7 +479,8 @@
       "avatar_url": "https://avatars3.githubusercontent.com/u/70360?v=4",
       "profile": "https://www.zastrin.com",
       "contributions": [
-        "content"
+        "content",
+        "fundingFinding"
       ]
     },
     {
@@ -13366,6 +13367,15 @@
       "name": "nijr",
       "avatar_url": "https://avatars.githubusercontent.com/u/200988320?v=4",
       "profile": "https://github.com/nijr",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "fredrik0x",
+      "name": "Fredrik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84518844?v=4",
+      "profile": "https://github.com/fredrik0x",
       "contributions": [
         "maintenance"
       ]
