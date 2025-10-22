@@ -2315,7 +2315,8 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/1863135?v=4",
       "profile": "https://github.com/gumb0",
       "contributions": [
-        "content"
+        "content",
+        "maintenance"
       ]
     },
     {
@@ -10513,7 +10514,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/89844309?v=4",
       "profile": "https://github.com/etan-status",
       "contributions": [
-        "content"
+        "content",
+        "maintenance"
       ]
     },
     {
@@ -13656,6 +13658,69 @@
       "name": "NikitaKent",
       "avatar_url": "https://avatars.githubusercontent.com/u/57263011?v=4",
       "profile": "http://nikitakent.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "AMelhede",
+      "name": "Andreas Melhede",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95473109?v=4",
+      "profile": "https://github.com/AMelhede",
+      "contributions": [
+        "example"
+      ]
+    },
+    {
+      "login": "Recxsmacx",
+      "name": "Ram Shukla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175395700?v=4",
+      "profile": "https://github.com/Recxsmacx",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "dsarfed",
+      "name": "0x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/186462938?v=4",
+      "profile": "https://github.com/dsarfed",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "lipsyre",
+      "name": "Gigabuidl",
+      "avatar_url": "https://avatars.githubusercontent.com/u/196653064?v=4",
+      "profile": "https://github.com/lipsyre",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "morph-dev",
+      "name": "Milos Stankovic",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82043364?v=4",
+      "profile": "https://github.com/morph-dev",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "katia-aa",
+      "name": "KA ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11549223?v=4",
+      "profile": "https://github.com/katia-aa",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "fishonamos",
+      "name": "Fishon Amos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43862685?v=4",
+      "profile": "https://fishonsnote.medium.com/",
       "contributions": [
         "content"
       ]
