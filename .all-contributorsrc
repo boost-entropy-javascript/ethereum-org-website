@@ -13468,7 +13468,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/178667149?v=4",
       "profile": "https://github.com/pete-vielhaber",
       "contributions": [
-        "maintenance"
+        "maintenance",
+        "content"
       ]
     },
     {
@@ -13778,6 +13779,24 @@
       "profile": "https://github.com/baiwfg2",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "ocandocrypto",
+      "name": "Angela O",
+      "avatar_url": "https://avatars.githubusercontent.com/u/124130440?v=4",
+      "profile": "https://github.com/ocandocrypto",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "HSuke",
+      "name": "HSuke",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3211079?v=4",
+      "profile": "https://github.com/HSuke",
+      "contributions": [
+        "maintenance"
       ]
     }
   ],
