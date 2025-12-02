@@ -2145,6 +2145,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/yasnazariel"><img src="https://avatars.githubusercontent.com/u/82168644?v=4?s=100" width="100px;" alt="yasnazariel"/><br /><sub><b>yasnazariel</b></sub></a><br /><a href="#content-yasnazariel" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Oreemo"><img src="https://avatars.githubusercontent.com/u/20112422?v=4?s=100" width="100px;" alt="Oreemo"/><br /><sub><b>Oreemo</b></sub></a><br /><a href="#content-Oreemo" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/flatsponge"><img src="https://avatars.githubusercontent.com/u/104839509?v=4?s=100" width="100px;" alt="flatsponge"/><br /><sub><b>flatsponge</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=flatsponge" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/iovoid"><img src="https://avatars.githubusercontent.com/u/8196270?v=4?s=100" width="100px;" alt="Lucas Fiegl"/><br /><sub><b>Lucas Fiegl</b></sub></a><br /><a href="#content-iovoid" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/LottR079"><img src="https://avatars.githubusercontent.com/u/20522868?v=4?s=100" width="100px;" alt="LottR079"/><br /><sub><b>LottR079</b></sub></a><br /><a href="#content-LottR079" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
