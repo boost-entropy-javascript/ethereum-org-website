@@ -13916,6 +13916,24 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "dmngdsm",
+      "name": "Ivan Manchev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15030734?v=4",
+      "profile": "https://www.ivanmanchev.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "cypherpepe",
+      "name": "Cypher Pepe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/125112044?v=4",
+      "profile": "https://github.com/cypherpepe",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
