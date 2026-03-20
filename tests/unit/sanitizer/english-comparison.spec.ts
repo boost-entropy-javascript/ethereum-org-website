@@ -24,6 +24,7 @@ const {
   restoreStrippedAbbreviations,
   fixMergedSupDigits,
   fixCrowdinNumberedTags,
+  removeStaleComponents,
 } = _testOnly
 
 test.describe("English Comparison Fixes", () => {
@@ -702,8 +703,7 @@ test.describe("English Comparison Fixes", () => {
 
   test.describe("restoreStrippedAbbreviations", () => {
     test("restores RWA abbreviation in title", () => {
-      const translated =
-        '---\ntitle: "الأصول الحقيقية ()"\n---\nContent here.'
+      const translated = '---\ntitle: "الأصول الحقيقية ()"\n---\nContent here.'
       const english =
         '---\ntitle: "Real-world assets (RWA)"\n---\nContent here.'
       const { content, fixCount } = restoreStrippedAbbreviations(
@@ -715,10 +715,8 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("restores PoA abbreviation in title", () => {
-      const translated =
-        '---\ntitle: "إثبات السلطة ()"\n---\nContent.'
-      const english =
-        '---\ntitle: "Proof-of-authority (PoA)"\n---\nContent.'
+      const translated = '---\ntitle: "إثبات السلطة ()"\n---\nContent.'
+      const english = '---\ntitle: "Proof-of-authority (PoA)"\n---\nContent.'
       const { content, fixCount } = restoreStrippedAbbreviations(
         translated,
         english
@@ -835,8 +833,10 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("handles multiple merged sup tags", () => {
-      const translated = "تقريبًا 2<sup>187</sup>. يجب إجراء ~<sup>269</sup> محاولة"
-      const english = "approximately 2<sup>187</sup>. must make ~2<sup>69</sup> attempts"
+      const translated =
+        "تقريبًا 2<sup>187</sup>. يجب إجراء ~<sup>269</sup> محاولة"
+      const english =
+        "approximately 2<sup>187</sup>. must make ~2<sup>69</sup> attempts"
       const { content, fixCount } = fixMergedSupDigits(translated, english)
       expect(content).toContain("2<sup>69</sup>")
       expect(fixCount).toBe(1)
@@ -877,15 +877,16 @@ test.describe("English Comparison Fixes", () => {
 
   test.describe("fixCrowdinNumberedTags", () => {
     test("replaces </0>text<0> with <strong>text</strong>", () => {
-      const translated = '</0>الظهور الأول لونا كضيفة<0>'
-      const english = "<strong>Luna's first appearance as a podcast guest</strong>"
+      const translated = "</0>الظهور الأول لونا كضيفة<0>"
+      const english =
+        "<strong>Luna's first appearance as a podcast guest</strong>"
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe("<strong>الظهور الأول لونا كضيفة</strong>")
       expect(fixCount).toBe(1)
     })
 
     test("handles HTML-escaped opening tag &lt;0>", () => {
-      const translated = '</0>من الجيد أن نعلم&lt;0>'
+      const translated = "</0>من الجيد أن نعلم&lt;0>"
       const english = "<strong>Good to know</strong>"
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe("<strong>من الجيد أن نعلم</strong>")
@@ -893,10 +894,8 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("handles inverted tags inside JSX paragraph", () => {
-      const translated =
-        '<p className="mt-0"></0>من الجيد أن نعلم&lt;0></p>'
-      const english =
-        '<p className="mt-0"><strong>Good to know</strong></p>'
+      const translated = '<p className="mt-0"></0>من الجيد أن نعلم&lt;0></p>'
+      const english = '<p className="mt-0"><strong>Good to know</strong></p>'
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe(
         '<p className="mt-0"><strong>من الجيد أن نعلم</strong></p>'
@@ -905,7 +904,7 @@ test.describe("English Comparison Fixes", () => {
     })
 
     test("handles multiple different numbered tags", () => {
-      const translated = '<0>نص عريض<1>و مائل</1></0>'
+      const translated = "<0>نص عريض<1>و مائل</1></0>"
       const english = "<strong>bold text<em>and italic</em></strong>"
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe("<strong>نص عريض<em>و مائل</em></strong>")
@@ -934,6 +933,57 @@ test.describe("English Comparison Fixes", () => {
       const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
       expect(content).toBe(translated)
       expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("removeStaleComponents", () => {
+    test("removes self-closing component not in English", () => {
+      const translated =
+        'Some text\n\n<ContributorsQuizBanner className="mt-16 mb-8" />\n\nMore text'
+      const english = "Some text\n\nMore text"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).not.toContain("ContributorsQuizBanner")
+      expect(content).toContain("Some text")
+      expect(content).toContain("More text")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves components that exist in English", () => {
+      const translated =
+        '<NetworkUpgradeSummary name="paris" />\n\nText'
+      const english =
+        '<NetworkUpgradeSummary name="paris" />\n\nText'
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("removes multiple stale components", () => {
+      const translated =
+        '<StaleOne />\nText\n<StaleTwo className="x" />'
+      const english = "Text"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).not.toContain("StaleOne")
+      expect(content).not.toContain("StaleTwo")
+      expect(fixCount).toBe(2)
+    })
+
+    test("does not remove components inside code blocks", () => {
+      const translated =
+        '```\n<ContributorsQuizBanner />\n```'
+      const english = "```\nsome code\n```"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).toContain("ContributorsQuizBanner")
+      expect(fixCount).toBe(0)
+    })
+
+    test("cleans up blank line left behind after removal", () => {
+      const translated =
+        'Before\n\n<StaleComponent />\n\nAfter'
+      const english = "Before\n\nAfter"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).not.toContain("\n\n\n")
+      expect(fixCount).toBe(1)
     })
   })
 })
