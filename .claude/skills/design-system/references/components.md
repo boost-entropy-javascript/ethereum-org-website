@@ -394,6 +394,25 @@ Big variant matrix.
 **`variant`**: `subtle | high-contrast | solid | outline`
 **`size`**: `small | medium`
 
+### `TagFilter`
+
+```tsx
+import TagFilter from "@/components/ui/tag-filter"
+```
+
+Controlled, presentational multi-select chip filter built on `TagButton` -- a wrapping chip row with an optional show-more/show-less expander. **Reach for this instead of hand-rolling a `TagButton` row** whenever a page filters a list by tags. Selection and match semantics (AND vs OR) live in the parent; the component only renders chips and reports toggles.
+
+```tsx
+<TagFilter
+  tags={getTagCounts(items, (i) => i.tags)} // [name, count][], caller pre-sorts/filters
+  value={selectedTags}
+  onChange={setSelectedTags}
+  defaultVisible={12} // chips before the expander; selected-but-hidden tags stay pinned-visible
+/>
+```
+
+**Props**: `tags` (`[name, count][]`, rendered as-is), `value` / `onChange` (controlled), `defaultVisible` (cutoff; omit to show all), `showCount` (default `true`, formats via `numberFormat(locale)`), `className`. Pair with `getTagCounts` from `@/lib/utils/tags` to build count-descending entries from any item list.
+
 ### `Alert`
 
 ```tsx
@@ -715,10 +734,10 @@ For prominent numeric displays (e.g., "$3000" prize amounts, statistics). Don't 
 ### Heroes -- `@/components/Hero`
 
 ```tsx
-import { HomeHero, HubHero, MdxHero, PageHero } from "@/components/Hero"
+import { HomeHero, HubHero, PageHero } from "@/components/Hero"
 ```
 
-See `canonical-imports.md` for selection.
+See `canonical-imports.md` for selection. (The former `MdxHero` was removed -- use `PageHero` text-only with `variant="no-divider"`.)
 
 ### Banner-named components
 
