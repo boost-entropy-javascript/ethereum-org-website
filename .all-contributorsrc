@@ -14378,6 +14378,24 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "nodeflareapp",
+      "name": "NodeFlare",
+      "avatar_url": "https://avatars.githubusercontent.com/u/302281547?v=4",
+      "profile": "https://nodeflare.app",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "hidargmax27-cmyk",
+      "name": "hidargmax27-cmyk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/250812573?v=4",
+      "profile": "https://github.com/hidargmax27-cmyk",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
